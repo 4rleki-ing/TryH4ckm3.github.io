@@ -16,7 +16,7 @@ tags:
   - TryHackme
 ---
 
-<img float="left" src="https://4rleki-ing.github.io/TryH4ckm3.github.io/assets/images/Introduccion-Seguridad-Ofensiva/Portada.png">
+<img align="left" src="https://4rleki-ing.github.io/TryH4ckm3.github.io/assets/images/Introduccion-Seguridad-Ofensiva/Portada.png">
 
 ## ¿Qué es la Seguridad Ofensiva?
 
