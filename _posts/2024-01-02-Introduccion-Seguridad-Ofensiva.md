@@ -16,7 +16,7 @@ tags:
   - TryHackme
 ---
 
-<p align="Center">
+<p align="center">
 <img src="https://4rleki-ing.github.io/TryH4ckm3.github.io/assets/images/Introduccion-Seguridad-Ofensiva/Portada.png">
 </p>
 
