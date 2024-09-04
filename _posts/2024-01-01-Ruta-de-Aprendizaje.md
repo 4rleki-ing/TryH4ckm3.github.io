@@ -1,7 +1,7 @@
 ---
 layout: single
-title: TryHackMe
-excerpt: "Una plataforma dedicada al aprendizaje de Pentesting"
+title: Hoja de Ruta de Aprendizaje
+excerpt: "Desde los principios fundamentales hasta las técnicas avanzadas, esta hoja de ruta proporciona pasos claros y recursos esenciales para ayudarle a desarrollar un conjunto sólido de habilidades."
 date: 2024-01-01
 classes: wide
 header:
