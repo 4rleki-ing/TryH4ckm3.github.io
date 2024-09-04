@@ -18,7 +18,7 @@ tags:
 
 <img src="https://4rleki-ing.github.io/TryH4ckm3.github.io/assets/images/Introduccion-Seguridad-Ofensiva/Portada.png" align= left>
 
-# ¿Qué es la Seguridad Ofensiva?
+## ¿Qué es la Seguridad Ofensiva?
 
 <p align="left">
 <img src="https://4rleki-ing.github.io/TryH4ckm3.github.io/assets/images/Introduccion-Seguridad-Ofensiva/Ofensiva.png">
@@ -41,7 +41,7 @@ En un rol cibernético defensivo, podría investigar computadoras o dispositivos
     - `Seguridad Ofensiva`
     - Seguridad Defensiva
 
-# Hackeando la primer máquina
+## Hackeando la primer máquina
 Antes de adentrarnos en las **carreras de Seguridad Cibernética** y en lo que es la seguridad ofensiva, vamos a empezar a hackear *(simulaciones falsas)*.
 
 Cuando abras esta tarea por primera vez en una computadora de escritorio, la pantalla iniciará automáticamente la máquina virtual de la tarea y la mostrará en una pantalla dividida.
@@ -50,10 +50,10 @@ Se usará para hackear una *aplicación bancaria* falsa llamada `FakeBank`. Tamb
 
 Usaremos una aplicación de línea de comandos llamada [GoBuster]() para forzar el sitio web de *FakeBank* y **encontrar directorios** y **páginas ocultas**. GoBuster tomará una lista de posibles nombres de páginas o directorios e intentará acceder a un sitio web con cada uno de ellos; ***si la página existe, te lo dirá***.
 
-## Paso 1. Abre una Terminal
+### Paso 1. Abre una Terminal
 Una terminal, también conocida como `línea de comandos`, nos permite interactuar con una computadora sin usar una interfaz gráfica de usuario.
 
-## Paso 2. Encuentra páginas ocultas en el sitio web
+### Paso 2. Encuentra páginas ocultas en el sitio web
 La mayoría de las empresas tienen una página de **portal de administración**, que brinda a su personal acceso a *controles administrativos básicos* para las operaciones diarias.
 
 En el caso de un banco, un empleado puede necesitar transferir dinero hacia y desde las cuentas de los clientes. A menudo, estas páginas *no son privadas*, lo que permite a los atacantes encontrar páginas ocultas que muestran o brindan acceso a controles administrativos o datos confidenciales.
@@ -68,7 +68,7 @@ En el comando anterior, se utiliza la opciónn `-u` para indicar el sitio web qu
 
 Verás que GoBuster escanea el sitio web con cada palabra de la lista y encuentra páginas que existen en el sitio. GoBuster habrá indicado las páginas que encontró en la lista de nombres de páginas/directorios (Indicadas por el Estado: 200).
 
-## Paso 3. Hackea el Banco
+### Paso 3. Hackea el Banco
 Deberías haber encontrado una *página secreta de transferencia bancaria* que permite transferir dinero entre cuentas en el banco `/bank-transfer`. Escribe la página oculta en el sitio web de FakeBank en la máquina.
 
 Esta página permite a un atacante robar dinero de cualquier cuenta bancaria, lo que es un *riesgo crítico* para un banco. Como hacker ético, deberías (con permiso) encontrar vulnerabilidades en su aplicación y reportarlas al banco para que las arregle antes de que un hacker las explote.
@@ -84,12 +84,12 @@ Si fueras un evaluador de penetración o un consultor de seguridad, este es un e
 
 Para cerrar la máquina se busca el botón rojo *"Cerrar"* en la parte superior de la página.
 
-# Carreras en Seguridad Cibernética
+## Carreras en Seguridad Cibernética
 La gente suele preguntarse cómo otros se convierten en hackers *(consultores de seguridad)* o defensores *(analistas de seguridad que luchan contra el cibercrimen)*, y la respuesta es sencilla.
 
 **Desglóselo**, aprenda un área de seguridad cibernética que le interese y practique regularmente con ejercicios prácticos. Adquiera el hábito de aprender un poco cada día en TryHackMe y aquirirá el conocimiento para conseguir su primer trabajo en la industria.
 
-## ¿Qué carreras existen?
+### ¿Qué carreras existen?
 La sala de carreras cibernéticas profundiza en las diferentes carreras en ciberseguridad. Sin embargo, aquí hay una breve descripción de algunos roles de seguridad ofensiva:
 
 - `Probador de Penetración`: Responsable de probar productos tecnológicos para encontrar vulnerabilidades de seguridad explotables.
