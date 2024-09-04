@@ -26,7 +26,7 @@ El contenido está guiado con ejércicios interactivos basados en escenarios del
 ## Conceptos básicos de seguridad cibernética
 Adquiera las habilidades básicas necesarias para iniciarse en el mundo de la seguridad cibernética.
 
-- [Introducción a la Seguridad Ofensiva]()
+- [Introducción a la Seguridad Ofensiva](https://4rleki-ing.github.io/TryH4ckm3.github.io/Introduccion-Seguridad-Ofensiva/)
 - [Introducción a la Seguridad Defensiva]()
 - [Carreras en el ámbito cibernético]()
 - [Principios de seguridad]()
