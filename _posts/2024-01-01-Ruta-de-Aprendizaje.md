@@ -2,7 +2,7 @@
 layout: single
 title: Hoja de Ruta de Aprendizaje
 excerpt: "Desde los principios fundamentales hasta las técnicas avanzadas, esta hoja de ruta proporciona pasos claros y recursos esenciales para ayudarle a desarrollar un conjunto sólido de habilidades."
-date: 2024-12-31
+date: 2024-08-31
 classes: wide
 header:
   teaser: /assets/images/Ruta-Aprendizaje/Portada.jpg
