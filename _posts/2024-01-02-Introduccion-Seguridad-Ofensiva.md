@@ -5,7 +5,7 @@ excerpt: "Hackea tu primer sitio web (legalmente en un entorno seguro) y experim
 date: 2024-08-30
 classes: wide
 header:
-  teaser: /assets/images/Introduccion-Seguridad-Ofensiva/Seguridad.png
+  teaser: https://4rleki-ing.github.io/TryH4ckm3.github.io/assets/images/Introduccion-Seguridad-Ofensiva/Seguridad.png
   teaser_home_page: true
 categories:
   - Ciberseguridad
@@ -17,13 +17,13 @@ tags:
 ---
 
 <p align="center">
-<img src="/assets/images/Introduccion-Seguridad-Ofensiva/Portada.png">
+<img src="https://4rleki-ing.github.io/TryH4ckm3.github.io/assets/images/Introduccion-Seguridad-Ofensiva/Portada.png">
 </p>
 
 # ¿Qué es la Seguridad Ofensiva?
 
 <p align="left">
-<img src="/assets/images/Introduccion-Seguridad-Ofensiva/Ofensiva.png">
+<img src="https://4rleki-ing.github.io/TryH4ckm3.github.io/assets/images/Introduccion-Seguridad-Ofensiva/Ofensiva.png">
 </p>
 
 En resumen, la `seguridad ofensiva` es el proceso de *entrar en los sistemas informáticos*, *explotar errores* de software y *encontrar lagunas* en las aplicaciones para obtener acceso no autorizado a ellas.
@@ -31,7 +31,7 @@ En resumen, la `seguridad ofensiva` es el proceso de *entrar en los sistemas inf
 Para vencer a un hacker, se debe de comportar como un hacker, encontrar vulnerabilidades y recomendar parches antes de que lo haga un cibercriminal, como se hará en esta sala.
 
 <p align="left">
-<img src="/assets/images/Introduccion-Seguridad-Ofensiva/Defensiva.png">
+<img src="https://4rleki-ing.github.io/TryH4ckm3.github.io/assets/images/Introduccion-Seguridad-Ofensiva/Defensiva.png">
 </p>
 
 Por otro lado, también existe la `seguridad defensiva`, que es el proceso de *proteger la red* y los sistemas informáticos de una organización mediante el análisis y la protección de cualquier amenaza digital potencial; obtén más información en la sala de [análisis forense digital]().
