@@ -55,7 +55,7 @@ La gobernanza de la seguridad de la información representa la estructura, las p
 
 Dada la creciente complejidad de las amenazas cibernéticas, la importancia de la gobernanza de la seguridad de la información crece continuamente. Es esencial para la gestión de riesgos, salvaguardar los datos confidenciales de intrusiones no autorizadas y cumplir con la regulaciones pertinentes. La gobernanza de la seguridad de la información cae dentro del ámbito de la gestión de alto nivel e incluye los siguientes procesos:
 
-<img align="center" src="https://4rleki-ing.github.io/TryH4ckm3.github.io/assets/images/Gobernanza-Regulacion/Seguridad-Informacion.png">
+<img src="https://4rleki-ing.github.io/TryH4ckm3.github.io/assets/images/Gobernanza-Regulacion/Seguridad-Informacion.png">
 
 - `Estrategia`: Desarrollar e implementar una estrategia integral de seguridad de la información que se alinee con los objetivos comerciales generales de la organiación.
 - `Políticas y Procedimientos`: Elaborar políticas y procedimientos que regulen el uso y protección de los activos de información.
@@ -71,9 +71,7 @@ El cumplimiento de las regulaciones suele ser obligatorio y aplicado por agencia
 ### Beneficios Clave
 Los siguientes son los beneficios de implementar gobernanza y regulación:
 
-<div align="center">
-    <img src="./Images/Beneficios.png" alt="" width="50%" height="auto" />
-</div>
+<img src="https://4rleki-ing.github.io/TryH4ckm3.github.io/assets/images/Gobernanza-Regulacion/Beneficios.png">
 
 - `Postura de Seguridad más sólida`: Implementar un programa integral de gobernanza de la seguridad y cumplir con las regulaciones pertinentes puede ayudar a una organización a reducir el riesgo de violaciones de seguridad y proteger la información confidencial contra el acceso no autorizado, el robo y el uso indebido. Beneficios de la gobernanza y las regulaciones de seguridad.
 - `Mayor confianza de las partes interesadas`: La gobernanza y la regulación de la seguridad eficaces pueden mejorarr la confianza de las partes interesadas al demostrar que una organización se toma en serio la seguridad cibernética y ha implementado medidas para proteger los datos confidenciales.
@@ -134,9 +132,7 @@ El marco de seguridad de la información proporciona un conjunto completo de doc
 ### Desarrollo de Documentos de Gobernanza
 A continuaciónn se muestran algunos pasos generalizados que se utilizan para desarrollar políticas, estándares, directrices, etc.
 
-<div align="center">
-    <img src="./Images/Documentos.Gobernanza.png" alt="" width="50%" height="auto" />
-</div>
+<img src="https://4rleki-ing.github.io/TryH4ckm3.github.io/assets/images/Gobernanza-Regulacion/Documentos-Gobernanza.png">
 
 - `Identificar el alcance y propósito`: Determinar qué cubrirá eel documento y por qué cubrirá el documento y por qué es necesario. Por ejemplo, es posible que se requiera una política de contraseñas para garantizar contraseñas de usuario sólidas y seguras. Por el contrario, podría ser neceesario un punto de referencia para establecer un nivel mínimo de seguridad para todos los sistemas.
 - `Investigación y revisión`: Investigue las leyes, regulaciones, estándares de la industria y mejores prácticas relevantes para garantizar que su documento sea completo y esté actualizado. Revisar las políticas, procedimientos y otros documentos existentes para evitar duplicar esfuerzos o contradecir las directrices existentes.
@@ -169,20 +165,16 @@ Las organizaciones sólo a veces necesitan crear estándares, marcos o líneas d
 Existen numerosos factores sobre los cuales decidimos qué marco estándar de la lista de verificación de referencia se debe utilizar; estos incluyen requisitos regulatorios relacionados principalmente con áreas geográficas particulares, alcance, objetivos, recursos disponibles y muchos más.
 
 ### Responde las preguntas a continuación
-1. ¿Se llama el paso que implica la evaluación periódica de las políticas y la realización de cambios según los aportes de las partes interesadas?
-    - `Review and update` -> Revisar y Actualizar.
+1. ¿Se llama el paso que implica la evaluación periódica de las políticas y la realización de cambios según los aportes de las partes interesadas? `Review and update` -> Revisar y Actualizar.
 
-2. ¿Se llama un conjunto de pasos específicos para emprender una tarea o proceso particular?
-    - `Procedure` -> Procedimiento.
+2. ¿Se llama un conjunto de pasos específicos para emprender una tarea o proceso particular? `Procedure` -> Procedimiento.
 
 ## Riesgo de Gobernanza y Cumplimiento (GRC)
 Como hemos estudiado, la gobernanza y el cumplimiento de la seguridad de la información son necesarios para mantener la postura general de seguridad de cualquier organización. ¿Pero cómo lograrlo? Aquí viene el papel del marco de Gobernanza y Cumplimiento de Riesgos (GRC). Se centra en dirigir la gobernanza general, la gestión de riesgos empresariales y el cumplimiento de la orrganización de manera integrada.
 
 Es un enfoque holísticode la seeguridad de la información que se alinea con la smetas y objetivos de la organización y ayuda a garantizar que la organización opere dentro de los límites de las regulaciones y estándares industriales relevantes. El marco GRC tiene los siguientes tres componentes:
 
-<div align="center">
-    <img src="./Images/Componentes.png" alt="" width="50%" height="auto" />
-</div>
+<img src="https://4rleki-ing.github.io/TryH4ckm3.github.io/assets/images/Gobernanza-Regulacion/GRC.png">
 
 - `Componente de Gobernanza`: Implica guiar a una organización estableciendo su dirección a través de una estrategia de seguridad de la información, que incluye políticas, estándares, líneas de base, marcos, etc., junto con el establecimiento de métodos de seguimiento adecuados para medir su desempeño y evaluar los resultados.
 - `Componente de Gestión de Riesgos`: Implica identificar, evaluar y priorizar los riesgos para la organización e implementar controles y estrategias de mitigación para gestionar esos riesgos de manera efectiva. Esto incluye monitorear e informar sobre los riesgos y evaluar y perfeccionar continuamente el programa de gestión de riesgos para garantizar su eficacia continua.
@@ -207,11 +199,9 @@ Para comprender completamente cada componente de GRC, es necesario comprenderlo 
 - `Actividades de cumplimiento`: Tome medidas para cumplir con los reqquisitos legales y los estándares de la industria, como PCI DSS, GLBA, etc. Además, esto también incluye implementar métodos correctos como SSL/TLS para evitar ataques Man in the Middle (MITM), garantizando la gestión automática de parches contra los software no parcheados, creando campañas de concientización para los usuarios para protegerlos de ataques de phishing y mucho más.
 
 ### Responde las preguntas a continuación
-- ¿Cuál es el componente del marco GRC involucrado en la identificación, evaluación y priorización de riesgos para la organización?
-    - `Risk Management` -> Gestión de Riesgos
+- ¿Cuál es el componente del marco GRC involucrado en la identificación, evaluación y priorización de riesgos para la organización? `Risk Management` -> Gestión de Riesgos
 
-- ¿Es importante monitorear y medir el desempeño de una política desarrollada? (si/no)
-    - `yea` -> Si
+- ¿Es importante monitorear y medir el desempeño de una política desarrollada? (si/no) `yea` -> Si
 
 ## Privacidad y Protección de Datos
 En todos los sectores, como el financiero, el sanitario, el gubernamental y el industrial, las normas de privacidad y protección de datos son fundamentales, ya que tratan con la información de identificación personal (PII) de los ciudadanos. Las normas de privacidad ayudan a garantizar que la información personal de las personas se maneje y almacene de manera responsable y ética. También ayudan a generar confianza, proteger la información personal y mantener el cumplimiento normativo. En el futuro, repasaremos los puntos esenciales de las regulaciones de privacidad y protección de datos más importantes y su propósito, lo que nos ayudará a comprender por qué las regulaciones de protección de datos son cruciales.
@@ -223,9 +213,7 @@ El GDPR es una ley de protección de datos implementada por la UE en mayo del 20
 - Los datos personales deben reducirse al minimo y recopilarse únicamente cuando sea necesario.
 - Se adoptarán medidas adecuadas para proteger los datos personales almacenados.
 
-<div align="center">
-    <img src="./Images/GDPR.png" alt="" width="50%" height="auto" />
-</div>
+<img src="https://4rleki-ing.github.io/TryH4ckm3.github.io/assets/images/Gobernanza-Regulacion/GDPR.png">
 
 La ley se aplica a todas las entidades comerciales que realizan negocios en la Unión Europea (UE) y recopilan/almacenan/procesan datos personales de residentes de la UE y están obligadas a cumplirla. Es una de las regulaciones de privacidad de datos más estrictas del mundo y protege los datos personales durante la recopilación. Las empresas sólo pueden recopilar datos personales por un motivo legítimo y deben informar al titular sobre su tratamiento. Además, esto también incluye sanciones y multas basadas en el incumplimiento en los 2 siguientes niveles:
 
@@ -236,11 +224,9 @@ La ley se aplica a todas las entidades comerciales que realizan negocios en la U
 PCI DSS se centra en mantener transacciones con tarjeta seguras y proteger contra el robo de datos y el fraude. Es ampliamente utilizado por empresas, principalmente een línea, para transacciones con tarjeta. Fue establecido por las principales marcas de tarjetas de crédito (Visa, MasterCard y American Express). Requiere un control estricto del acceso a la información del titular de la tarjeta y monitorear el acceso no autorizado, utilizando medidas recomendadas como firewalls de aplicaciones web y cifrado. Puede obtener más información sobre el estándar [aquí](https://docs-prv.pcisecuritystandards.org/PCI%20DSS/Supporting%20Document/PCI_DSS-QRG-v4_0.pdf)
 
 ### Responde las preguntas a continuación
-1. ¿Cuál es la multa máxima para los usuarios de Nivel 1 según GDPR (en términos de porcentaje)?
-    - `4`
+1. ¿Cuál es la multa máxima para los usuarios de Nivel 1 según GDPR (en términos de porcentaje)? `4`
 
-2. En términos de PCI DSS, ¿qué significa CHD?
-    - `cardholder data` -> Datos del titular de la tarjeta
+2. En términos de PCI DSS, ¿qué significa CHD? `cardholder data` -> Datos del titular de la tarjeta
 
 ## Publicaciones Especiales del NIST
 ### NIST 800-53
@@ -249,22 +235,16 @@ PCI DSS se centra en mantener transacciones con tarjeta seguras y proteger contr
 ### Puntos Clave
 NIST 800-53 ofrece un conjunto completo de controles de seguridad y privacidad que las organizaciones pueden utilizar para proteger sus operaciones, activos, personal y otras organizaciones de diversas amenazas y riesgos. Estos incluyen ataques intencionales, errores no intencionales, desastres naturales, fallas de infraestructura, actividad de inteligencia extranjera y preocupaciones sobre la privacidad. NIST 800-53 Revisión 5 organiza los controles de seguridad en venite familias, cada una de las cuales aborda una categoría de preocupación de seguridad específica. Puede obtener más información sobre los controles [aquí](https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-53r5.pdf) (Sección 2.2)
 
-<div align="center">
-    <img src="./Images/Familias.NIST.png" alt="" width="50%" height="auto" />
-</div>
+<img src="https://4rleki-ing.github.io/TryH4ckm3.github.io/assets/images/Gobernanza-Regulacion/Puntos-Clave.png">
 
 ### Desarrollo e implementación del Programa de Seguridad de la Información basado en NIST 800-53
 Entre todas las familias, la "Gestión de Programas" es uno de los controles cruciales del marco NIST 800-53. El control de gestión de programas exige establecer, implementar y monitorear programas en toda la organización para la seguridad y privacidad de la información, al tiempo que se salvaguardan los sistemas procesados, almacenados o transmitidos a través de ellos. Para garantizar la gestión del programa, es necesario implementar los siguientes subcontroles:
 
-<div align="center">
-    <img src="./Images/Programa.NIST.png" alt="" width="50%" height="auto" />
-</div>
+<img src="https://4rleki-ing.github.io/TryH4ckm3.github.io/assets/images/Gobernanza-Regulacion/Programa-Seguridad.png">
 
 ### Mejores prácticas de Cumplimiento
 
-<div align="center">
-    <img src="./Images/Mejores.Practicas.png" alt="" width="50%" height="auto" />
-</div>
+<img src="https://4rleki-ing.github.io/TryH4ckm3.github.io/assets/images/Gobernanza-Regulacion/Mejores-Practicas.png">
 
 En primer lugar, las empresas deben llevar a cabo un proceso de descubrimiento exhaustivo para reconocer y catalogar sus activos de datos, sistemas de información y amenazas asociadas. Esto incluye comprender los flujos de datos, las dependencias del sistema y las posibles vulnerabilidades.
 
@@ -278,14 +258,11 @@ Finalmente, las organizaciones deben establecer sistemas de monitoreo efectivos 
 La publicación especial 800-63B del NIST es un conjunto de pautas creadas por el NIST para ayudar a las organizaciones a establecer prácticas efectivas de identidad digital. Su objetivo principal es autenticar y verificar las identidades de las personas que acceden a servicios, sistemas y redes digitales. Las directrices proporcionan recomendaciones para diferentes niveles de garantía de identidad, que van desde la garantía básica hasta la alta. También ofrecen consejos sobre el uso de factores de autenticación, incluidas contraseñas, datos biométricos y tokens, y sobre ccómo administrar y almacenar de forma segura las credenciales de los usuarios.
 
 ### Responde las preguntas a continuación
-1. Según NIST 800-53, ¿en qué categoría de control se encuentra la protección de los medios?
-    - `Physical` -> Física
+1. Según NIST 800-53, ¿en qué categoría de control se encuentra la protección de los medios? `Physical` -> Física
 
-2. Según NIST 800-53, ¿en qué categoría de control se encuentra la respuesta al incidente?
-    - `Administrative` -> Administrativa
+2. Según NIST 800-53, ¿en qué categoría de control se encuentra la respuesta al incidente? `Administrative` -> Administrativa
 
-3. ¿Qué fase (nombre) de las mejores prácticas de cumplimiento de NIST 800-53 da como resultado la correlación de activos y permisos identificados?
-    - `Map` -> Mapa
+3. ¿Qué fase (nombre) de las mejores prácticas de cumplimiento de NIST 800-53 da como resultado la correlación de activos y permisos identificados? `Map` -> Mapa
 
 ## Gestión y cumplimiento de la seguridad de la información
 La planificación estratégica, la ejecución y la administración continua de medidas de seguridad son parte de la gestión de la Seguridad de la Información (SI), que protege los activos de información del acceso, uso, divulgación, interrupción, alteración y destrucción no autorizados. Implica evaluación e identificación de riesgos, desarrollo de procedimisntos y controles de seguridad, planificación de respuesta a incidentes y capacitación en concientización sobre seguridad. Por el contrario, el cumplimiento se refiere al cumplimiento de los estándares legales, regulatorios, contractuales y específicos de la industria relacionados con la seguridad de la información. En la gestión y cumplimiento de SI, repasaremos 2 estándares clave.
@@ -301,9 +278,7 @@ ISO 27001 es un estándar reconocido internacionalmente para los requisitos para
 - `Auditoría Interna`: Implica realizar auditorías periódicas del SGSI para garantizar que esté funcionando de forma eficaz.
 - `Revisión de la gestión`: Revisar el desempeño del SGSI a intervalos regulares.
 
-<div align="center">
-    <img src="./Images/Beneficios.ISO27001.png" alt="" width="50%" height="auto" />
-</div>
+<img src="https://4rleki-ing.github.io/TryH4ckm3.github.io/assets/images/Gobernanza-Regulacion/ISO27001.png">
 
 Un SGSI basado en la norma ISO 27001 requiere un diseño y una ejecución cuidadosa. Implica evaluar exhaustivamente los procedimientos de seguridad de la organización, detectar brechas y realizar una exhaustiva evaluación de riesgos. El control de acceso, la respuesta a incidentes, etc., son solo algunos ejemplos de las áreas donde se deben crear reglas y procesos claros y alinearse con los requisitos de la norma ISO 27001. El apoyo del liderazgo y la asignación de recursos también son esenciales para que el SGSI se implemente con éxito. El seguimiento, la medición y el desarrollo continuo periódicos son cruciales para garantizar la eficacia y la alineación continua del SGSI con los objetivos de la organización.
 
@@ -331,18 +306,14 @@ El equipo directivo de una organización puede seguir los siguientes pasos antes
 - `Realizar la auditoría`: El auditor revisará sus controles y realizará pruebas para evaluar su efectividad. Ña auditoría pueede incluir entrevistas con personal clave, revisiones de documentación y pruebas de controles.
 - `Recibir el informe de auditoría`: Una vez finalizada la auditoría, el auditor proporcionará un informe detallando los resultados de la auditoría. El informe pueede incluir una descripción de sus controles, cualquier deficiencia o brecha identificada y recomendaciones de mejora.
 
-<div align="center">
-    <img src="./Images/SOC2.png" alt="" width="50%" height="auto" />
-</div>
+<img src="https://4rleki-ing.github.io/TryH4ckm3.github.io/assets/images/Gobernanza-Regulacion/SOC2.png">
 
 El diagrama anterior muestra los controles genéricos que se verificarán durante una auditoría SOC 2 para una empresa financiera según el alcance de la auditoría. Aparte de eso, existen controles técnicos y específicos, como garantizar el cifrado de datos en tránsito, seguridad de la red, gestión de incidentes, etc.
 
 ### Responde las preguntas a continuación
-1. ¿Qué componente de ISO/IEC 27001 implica seleccionar e implementar controles para reducir los riesgos identificados a un nivel aceptable?
-    - `Risk treatment` -> Tratamiento de riesgos
+1. ¿Qué componente de ISO/IEC 27001 implica seleccionar e implementar controles para reducir los riesgos identificados a un nivel aceptable? `Risk treatment` -> Tratamiento de riesgos
 
-2. En los controles genéricos SOC 2, ¿qué control mueestra que el sistema permanece disponible?
-    - `Availability` -> Disponibilidad
+2. En los controles genéricos SOC 2, ¿qué control mueestra que el sistema permanece disponible? `Availability` -> Disponibilidad
 
 ## Conclusión
 Esta sala ha proporcionado una descripción general completa de la importancia de desarrollar un marco eficaz de regulación y gobernanza de la seguridad de la información para proteger los activos valiosos y la información confidencial de una organización. Hemos aprendido sobre varias leyes y regulaciones que rigen nla privacidad y la protección de datos, como GDPR y PCI DSS. La sala también presentó el concepto del marco de gobernanza, gestión de riesgos y cumplimiento (GRC) y explicó como desarrollar un programa GRC eficaz a través de escenarios del mundo real.
@@ -352,5 +323,4 @@ Además, la sala destacó diferentes habilitadores de gobernanza, como ISO/IEC 2
 Estén atentos a salas más interesantes sobre cómo gobernar y regular la seguridad de una organización a través de políticas.
 
 ### Responde las preguntas a continuación
-1. Haga clic en el botón "Ver Sitio" en la parte superior de la tarea ára iniciar el sitio estático en vista dividida. ¿Qué es la bandera después de completar el ejercicio?
-    - `THM{SECURE_1001}`
+1. Haga clic en el botón "Ver Sitio" en la parte superior de la tarea ára iniciar el sitio estático en vista dividida. ¿Qué es la bandera después de completar el ejercicio? `THM{SECURE_1001}`
