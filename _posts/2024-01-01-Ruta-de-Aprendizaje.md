@@ -17,7 +17,7 @@ tags:
 ---
 
 <p align="center">
-<img src="/assets/images/Ruta-Aprendizaje/Aprende.png">
+<img src="https://4rleki-ing.github.io/TryH4ckm3.github.io/assets/images/Ruta-Aprendizaje/Aprende.png">
 </p>
 
 # Aprende
