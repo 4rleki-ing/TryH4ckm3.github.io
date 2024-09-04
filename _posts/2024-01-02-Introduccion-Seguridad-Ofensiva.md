@@ -16,11 +16,13 @@ tags:
   - TryHackme
 ---
 
-<img align="left" src="https://4rleki-ing.github.io/TryH4ckm3.github.io/assets/images/Introduccion-Seguridad-Ofensiva/Portada.png" float="left">
+<p align="Center">
+<img src="https://4rleki-ing.github.io/TryH4ckm3.github.io/assets/images/Introduccion-Seguridad-Ofensiva/Portada.png">
+</p>
 
 ## ¿Qué es la Seguridad Ofensiva?
 
-<p align="left">
+<p align="Center">
 <img src="https://4rleki-ing.github.io/TryH4ckm3.github.io/assets/images/Introduccion-Seguridad-Ofensiva/Ofensiva.png">
 </p>
 
@@ -28,7 +30,7 @@ En resumen, la `seguridad ofensiva` es el proceso de *entrar en los sistemas inf
 
 Para vencer a un hacker, se debe de comportar como un hacker, encontrar vulnerabilidades y recomendar parches antes de que lo haga un cibercriminal, como se hará en esta sala.
 
-<p align="left">
+<p align="Center">
 <img src="https://4rleki-ing.github.io/TryH4ckm3.github.io/assets/images/Introduccion-Seguridad-Ofensiva/Defensiva.png">
 </p>
 
