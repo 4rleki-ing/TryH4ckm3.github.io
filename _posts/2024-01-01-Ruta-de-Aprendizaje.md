@@ -20,12 +20,12 @@ tags:
 <img src="/assets/images/Ruta-Aprendizaje/Aprende.png">
 </p>
 
-## Aprende
+# Aprende
 
 El contenido está guiado con ejércicios interactivos basados en escenarios del mundo real, desde hackear máquinas hasta investigar ataques, todo está cubierto.
 
-### Hoja de Ruta de Aprendizaje
-#### Conceptos básicos de seguridad cibernética
+## Hoja de Ruta de Aprendizaje
+### Conceptos básicos de seguridad cibernética
 Adquiera las habilidades básicas necesarias para iniciarse en el mundo de la seguridad cibernética.
 
 - [Introducción a la Seguridad Ofensiva]()
@@ -35,7 +35,7 @@ Adquiera las habilidades básicas necesarias para iniciarse en el mundo de la se
 - [Gobernanza y Regulación]()
 - [Cadena de muerte cibernética (Cyber Kill Chain)]()
 
-#### Habilidades Fundamentales
+### Habilidades Fundamentales
 Adquiera las habilidades fundamentales necesarias para ingresar a cualquier carrera en la industria.
 
 - [Fundamentos de Linux, Parte 1]()
@@ -49,7 +49,7 @@ Adquiera las habilidades fundamentales necesarias para ingresar a cualquier carr
 - [Cómo funcionan los sitios web]()
 - [Unificando todo]()
 
-#### Habilidades profesionales en Ciberseguridad
+### Habilidades profesionales en Ciberseguridad
 Domine las habilidades específicas necesarias para la carrera que le interesa.
 
 `Analista de Seguridad`: Domine sus primeros pasos para convertirse en analista de seguridad.
