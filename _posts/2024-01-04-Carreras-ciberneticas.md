@@ -20,7 +20,7 @@ tags:
 <img src="https://4rleki-ing.github.io/TryH4ckm3.github.io/assets/images/Carreras-Ciberneticas/Portada.png">
 </p>
 
-Las carreras en ciberseguridad son cada vez más demandadas y ofrecen salarios altos. Hay muchos trabajos diferentes dentro de la industria de la seguridad, desde pruebas de penetración ofensivas (piratear máquinas e informar sobre vulnerabilidades) hasta seguridad defensiva (defender e investigar ciberataques).
+Las carreras en ciberseguridad son cada vez más demandadas y ofrecen salarios altos. Hay muchos trabajos diferentes dentro de la industria de la seguridad, desde pruebas de penetración ofensivas *(piratear máquinas e informar sobre vulnerabilidades)* hasta seguridad defensiva *(defender e investigar ciberataques)*.
 
 **¿Por qué hacer una carrera en ciberseguridad?**
 
@@ -31,15 +31,15 @@ Las carreras en ciberseguridad son cada vez más demandadas y ofrecen salarios a
 Esta sala te ayuda a adentrarte en la ciberseguridad al brindarte información sobre varios roles en ciberseguridad; también te vincula a diferentes rutas de aprendizaje que puedes usar para comenzar a desarrollar tus habilidades cibernéticas.
 
 ### Responde las preguntas a continuación
-1. ¡Comencemos a explorar los diferentes roles de ciberseguridad! `No se necesita respuesta`
+- ¡Comencemos a explorar los diferentes roles de ciberseguridad!
 
 En esta sala se ha proporcionado una descripción general de las diferentes carreras de ciberseguridad. No olvide que puede aprovechar la formación en línea para conseguir el trabajo de sus sueños en ciberseguridad.
 
 ## Analista de Seguridad
 
-<div align="center">
-    <img src="./Images/Analista_Seguridad.jpeg" alt="" width="50%" height="auto" />
-</div>
+<p align="center">
+<img src="https://4rleki-ing.github.io/TryH4ckm3.github.io/assets/images/Carreras-Ciberneticas/Analista-Seguridad.png">
+</p>
 
 `Objetivo`: Responsable de mantener la seguridad de los datos de una organización.
 
@@ -58,14 +58,13 @@ Las rutas de aprendizaje de TryHackMe le brindarán tanto el conocimiento técni
 - [Nivel SOC 1]()
 
 ### Responde las preguntas a continuación
-1. Lea sobre lo que hace un analista de seguridad
-    - `No se necesita respuesta`
+- Lea sobre lo que hace un analista de seguridad
 
 ## Ingeniero de Seguridad
 
-<div align="center">
-    <img src="./Images/Ingeniero_Seguridad.jpeg" alt="" width="50%" height="auto" />
-</div>
+<p align="center">
+<img src="https://4rleki-ing.github.io/TryH4ckm3.github.io/assets/images/Carreras-Ciberneticas/Ingeniero-Seguridad.png">
+</p>
 
 `Objetivo`: Diseñar, supervisar y mantener controles de seguridad, redes y sistemas para ayudar a prevenir ciberataques.
 
@@ -87,13 +86,12 @@ Las rutas de aprendizaje de TryHackMe le brindarán tanto el conocimiento técni
 
 ### Responde las preguntas a continuación
 1. Lea sobre lo que hace un ingeniero de seguridad.
-    - `No se necesita respuesta`
 
 ## Responder Incidentes
 
-<div align="center">
-    <img src="./Images/Respondedor_Incidentes.jpeg" alt="" width="40%" height="auto" />
-</div>
+<p align="center">
+<img src="https://4rleki-ing.github.io/TryH4ckm3.github.io/assets/images/Carreras-Ciberneticas/Responder-Incidentes.png">
+</p>
 
 `Objetivo`: Identifica y mitiga los ataques mientras las operaciones de los atacantes aún se están desarrollando.
 
@@ -121,13 +119,12 @@ Las rutas de aprendizaje de TryHackMe le brindarán tanto el conocimiento técni
 
 ### Responde las preguntas a continuación
 1. Lea sobre lo que hace un respondedor de incidentes.
-    - `No se necesita respuesta`.
 
 ## Examinador Forense Digital
 
-<div align="center">
-    <img src="./Images/Forense_Digital.jpeg" alt="" width="40%" height="auto" />
-</div>
+<p align="center">
+<img src="https://4rleki-ing.github.io/TryH4ckm3.github.io/assets/images/Carreras-Ciberneticas/Forense.png">
+</p>
 
 `Objetivo`: Responsable de utilizar la ciencia forense digital para investigar incidentes y delitos.
 
@@ -144,9 +141,9 @@ Si te gusta jugar a ser detective, este podría ser el trabajo perfecto. Si trab
 
 ## Analista de Malware
 
-<div align="center">
-    <img src="./Images/Analista_Malware.jpeg" alt="" width="40%" height="auto" />
-</div>
+<p align="center">
+<img src="https://4rleki-ing.github.io/TryH4ckm3.github.io/assets/images/Carreras-Ciberneticas/Analista-Malware.png">
+</p>
 
 `Objetivo`: Analiza todo tipo de malware para aprender más sobre cómo funcionan y qué hacen.
 
@@ -163,13 +160,12 @@ El objetivo final es aprender sobre todas las actividades que lleva a cabo un pr
 
 ### Responde las preguntas a continuación
 1. Lea sobre lo que hace un analista de malware
-    - `No se enecesita respuesta`.
 
 ## Probador de Penetración
 
-<div align="center">
-    <img src="./Images/Pentester.jpeg" alt="" width="40%" height="auto" />
-</div>
+<p align="center">
+<img src="https://4rleki-ing.github.io/TryH4ckm3.github.io/assets/images/Carreras-Ciberneticas/Pentester.png">
+</p>
 
 `Objetivo`: Responsable de probar productos tecnológicos en busca de vulnerabilidades de seguridad.
 
@@ -194,9 +190,9 @@ Las rutas de aprendizaje de TryHAckMe le brindarán tanto el conocimiento técni
 
 ## Red Teamer
 
-<div align="center">
-    <img src="./Images/Red_Teamer.jpeg" alt="" width="40%" height="auto" />
-</div>
+<p align="center">
+<img src="https://4rleki-ing.github.io/TryH4ckm3.github.io/assets/images/Carreras-Ciberneticas/Red-Team.png">
+</p>
 
 `Objetivo`: Desempeña el papel de un adversario, atacando a una organización y brindando retroalimentación desde la prespectiva de un enemigo.
 
@@ -217,6 +213,4 @@ Las rutas de aprendizaje de TryHackMe le brindarán tanto el conocimiento técni
 - [Red TEamer]()
 
 ### Responde las preguntas a continuación
-1. Lea sobre lo que hace un Red TEamer
-    - `No se necesita respuesta`
-
+1. Lea sobre lo que hace un Red Teamer
