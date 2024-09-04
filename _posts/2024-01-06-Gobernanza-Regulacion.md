@@ -25,9 +25,7 @@ Para combatir esta amenaza en evolución, es necesario un enfoque integral de go
 
 Al adoptar una postura proactiva y estratégica hacia la ciberseguridad, las organizaciones pueden mitigar los riesgos que plantean los actores maliciosos y salvaguardar sus sistemas sensibles contra violaciones potencialmente catastróficas.
 
-<div align="center">
-    <img src="./Images/Estrategia.jpeg" alt="" width="50%" height="auto" />
-</div>
+<img align="center" src="https://4rleki-ing.github.io/TryH4ckm3.github.io/assets/images/Gobernanza-Regulacion/Estrategia.png">
 
 ### Objetivos de aprendizaje
 - Comprender el papel y la importancia de la gobernanza y la regulación en la ciberseguridad.
