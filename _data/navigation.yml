@@ -1,6 +1,6 @@
 main:
   - title: "Home"
-    url: /
+    url: https://4rleki-ing.github.io
   - title: "Artículos"
     url: /year-archive/
   - title: "Categorías"
