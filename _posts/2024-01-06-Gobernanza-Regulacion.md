@@ -43,10 +43,8 @@ Ya estamos listos para comenzar si ya has pasado por las salas anteriones.
 
 ### Responde las siguientes preguntas
 1. Estoy listo para comenzar la sala.
-    - `No se necesita una respuesta`
 
 ## ¿Por qué es importante?
-
 ### Terminologías Importantes
 - `Gobernanza`: Gestionar y dirigir una organización o sistema para lograr sus objetivos y garantizar el cumplimiento de las leyes, regulaciones y estándares.
 - `Regulación`: Regla o ley aplicada por un órgano rector para garantizar su cumplimiento y proteger contra daños.
@@ -57,9 +55,7 @@ La gobernanza de la seguridad de la información representa la estructura, las p
 
 Dada la creciente complejidad de las amenazas cibernéticas, la importancia de la gobernanza de la seguridad de la información crece continuamente. Es esencial para la gestión de riesgos, salvaguardar los datos confidenciales de intrusiones no autorizadas y cumplir con la regulaciones pertinentes. La gobernanza de la seguridad de la información cae dentro del ámbito de la gestión de alto nivel e incluye los siguientes procesos:
 
-<div align="center">
-    <img src="./Images/Gobernanza.png" alt="" width="50%" height="auto" />
-</div>
+<img align="center" src="https://4rleki-ing.github.io/TryH4ckm3.github.io/assets/images/Gobernanza-Regulacion/Seguridad-Informacion.png">
 
 - `Estrategia`: Desarrollar e implementar una estrategia integral de seguridad de la información que se alinee con los objetivos comerciales generales de la organiación.
 - `Políticas y Procedimientos`: Elaborar políticas y procedimientos que regulen el uso y protección de los activos de información.
