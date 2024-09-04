@@ -357,7 +357,86 @@ La solución ideal para este problema es simplemente no conectarse a redes que n
 
 Las redes privadas virtuales (VPN) cifran todo el tráfico que sale y vuelve a entrar en su máquina, lo que hace que cualquier técnica de interceptación sea inútil, ya que los datos interceptados simplemente parecerán un galimatías. Si bien es posible alojar su propio servidor VPN de forma gratuita, la mayoría de las personas prefieren utilizar una de las muchas soluciones en línea. Algunas de estas soluciones comerciales son gratuitas, peo tenga cuidado: las VPN gratuitas tienden a no proporcionar la mejor seguridad y, a menudo, recopilan ssus datos para obtener ganancias. Dicho esto, el precio de una buena VPN vale la pena por la mayor seguridad al operar en redes que no son de confianza. Hay muchas buenas opciones disponibles, incluidas [ProtonVPN](https://protonvpn.com/) y [Mullvad VPN](https://mullvad.net/en), por nombrar dos.
 
+### Seguridad de la conexión a sitios web
+Además de las medidas que toma para protegerse, también es importante conocer las medidas que toman los servicios en línea para protegerlo.
+
+Todos los sitios web ahora solo deben proporcionar información en la seguridad de una conexión cifrada. Al igual que con el uso de una VPN, esto evita que un atacante lea o modifique su tráfico web si lo intercepta. La conexión cifrada que se utiliza para crear HTTPS (Protocolo Seguro de Transferencia de Hipertexto) se conoce como TLS (Seguridad de la capa de transporte) y en la mayoría de los navegadores se representa con un candado a la izquierda de la barra de búsqueda, que indica que la conexión es segura:
+
+<img align="center" src="https://4rleki-ing.github.io/TryH4ckm3.github.io/assets/images/Ataques-Comunes/HTTPS.png">
+
+Con esto en su lugar, su tráfico solo se puede descifrar en circunstancias muy selectas; es decir, si se trata de un dispositivo administrado por el trabajo o la escuela y está conectado a una red de trabajo o escuela.
+
+Nota: La presencia del candado indica que la conexión es segura; no garantiza que el sitio web en sí sea seguro. En otras palabras, un sitio web malicioso puede tener fácilmente un certificado TLS (lo que significa que su tráfico con el servidor está cifrado), pero eso no impide que el sitio tenga un propósito malicioso.
+
+Si accede a un sitio web sin el símbolo del candado, nunca ingrese credenciales ni información confidencial, especialmente se está utilizando una red que no es de confianza.
+
+En algunos casos, también puede ver un candado con una cruz o un signo de exclamación sobre él; esto indica que la conexión es teóricamente segura, pero que hay algo incorrecto con el certificado que usa el servidor. La presencia de este ícono de candado alterado puede significar cualquier cosa, desde que el administrador del servidor simplemente dejó que el certificado caduque hasta que un atacante interfiera activamente con la seguridad de su conexión. En otras palabras: si el icono es cualquier cosa que no sea un candado normal, no conffie en que la conexión sea segura.
+
+También puede encontrar errores de página completa relacionados con la seguridad del certificado al intentar acceder a páginas web; estos pueden verse así:
+
+<img align="center" src="https://4rleki-ing.github.io/TryH4ckm3.github.io/assets/images/Ataques-Comunes/Error-Certificado.png">
+
+Como regla general, si ve un error como este, debe hacer clic en el botón "Volver" (o equivalente en otros navegadores); generalmente significa que hay un problema con la conexión cifrada, lo que podría dejar su tráfico expuesto a ser robado.
+
+### Responda las siguientes preguntas a continuación
+- Implemente el contenido interactivo haciendo clic en el botón verde en la parte superior de la tarea.
+- El contenido interactivo de esta tarea demuestra lo que puede suceder si se envía información a través de una red potencialmente insegura con varios tipos de cifrado (o falta de ellos). No hay ninguna bandera para esta tarea, pero se le recomienda que pruebe cada uno de los siguientes escenarios, mezclando y combinando las opciones proporcionadas en el cuadro de control en la parte inferior derecha de la pantalla.
 
 ## [Mantenerse a Salvo] Respaldos
+### Descripción General
+Las copias de seguridad son, sin duda, la medida defensiva más importante que puede adoptar para proteger sus datos. Pase lo que pase, si ha tomado las medidas adecuadas para realizar copias de seguridad de su información, siempre podrá recuperarla, casi independientemente de la gravedad del daño.
+
+Tanto si se trata de datos empresariales de vital importancia en el trabajo como de fotos familiares en casa, las copias de seguridad son una medida sencilla que se amortiza con creces en caso de que ocurra lo peor.
+
+Según los datos en cuestión, realizar copias de seguridad y restaurarlas puede ser tan sencillo como arrastrar y soltar carpetas en Google Drive. Dicho esto, también hay muchas soluciones de software disponibles para ayudar a automatizar las copias de seguridad y simplificar la restauración.
+
+### La regla de oro 3, 2, 1
+La regla de oro para realizar copias de seguridad es relativamente simple y suele denominarse "regla 3,2,1". Dicha regla especifica que:
+
+- Siempre debe conservar al menos tres copias actualizadas de sus datos; esto puede incluir la copia original, pero todas las copias deben conservarse.
+- Las copias de seguridad deben almacenarse en al menos dos medios de almacenamiento diferentes; por ejemplo: una copia de seguridad en la nube y un dispositivo USB. Esto puede incluir un disco duro en su PC.
+- Una (o más) copias de seguridad deben almacenarse "fuera de las instalaciones". Los servicios en la nube como Google Drive son ideales para uso personal en este sentido.
+
+Sus copias de seguridad deberían estar seguras si se cumplen las tres condiciones de la regla 3,2,1; pero es igualmente importante la frecuencia con la que realiza las copias de seguridad. ¡No tiene sentido mantener sus copias de seguridad almacecnadas de forma segura si todas tienen un año de antigüedad!
+
+La frecuencia con la que realiza copias de seguridad de sus datos depende de usted y, por lo general, depende de la confidencialidad de los datos, en comparación con el riesgo de que se vean comprometidos y la cantidad de espacio de copia de seguridad disponible. Por ejemplo, una corporación multimillonaria que maneja datos confidenciales corre un alto riesgo de sufrir un ataque de ransomware y es posible que desee realizar copias de seguridad completas dos o tres veces al día. En comparación, un usuario doméstico puede sentir la necesidad de realizar copias de seguridad solo una o dos veces por semana.
+
+### Responda las preguntas a continuación
+- ¿Cuál es la cantidad mínima de copias de seguridad actualizadas que debe realizar? `3`
+- De estos, cuántos (como mínimo) deberían almacenarse en otra ubicación? `1`
+
 ## [Mantenerse a Salvo] Actualizaciones y Parcheos
+### Actualizaciones de software
+Las actualizaciones son una parte esencial del ciclo de vida del desarrollo de software; permiten a los desarrolladores agregar nuevas funciones, corregir errores y, de otro modo, modificar aspectos del producto. Cuando se descubren vulnerabilidades en el software, los desarrolladores suelen publicar actualizaciones especiales denominadas parches que contienen una solución para la vulnerabilidad o "parchan" el problema de seguridad.
+
+Por este motivo, es imperativo que actualice el software siempre que sea posible, especialmente en el caso de sistemas operativos (Windows o macOS), donde las vulnerabilidades pueden ser particularmente peligrosas, como se ve en el siguiente estudio de caso.
+
+Caso de estudio: Eternal Blue
+
+Se cree que Eternal Blue fue descubierto por la Agencia de Seguridad Nacional de los Estados Unidos (NSA) y se filtró al público en general en abril de 2017. La vulnerabilidad afecta a una parte integral del sistema operativo Windows y le otorga a un atacante remoto control total sobre el objetivo en el nivel más alto de privilegios. Puede comprobarlo usted mismo en la sala [Blue de TryHackMe]().
+
+Microsoft lanzó rápidamente un parche (el infame [MS17-010](https://learn.microsoft.com/en-us/security-updates/SecurityBulletins/2017/ms17-010)) que fue diseñado para eliminar el componente vulnerable del software; sin embargo, muchos administradores simplemente optaron por no descargarlo por una razón u otra.
+
+¿Por qué es importante? Eternal Blue fue el vector de transmisión que utilizó el ransomware Wannacry (discutido en la tarea 4) para propagarse e infectar nuevos dispositivos. Eternal Blue dio acceso total a un objetivo de forma remota, lo que lo convierte en una vulnerabilidad perfecta para explotar con un virus autorreplicante. A pesar de que se había publicado un parche meses antes de la aparición de Wannacry, el ransomware aún pudo atacar millones de sistemas sin parches, con efectos devastadores.
+
+Puede leer más sobre Eternal Blue [aquí](https://www.sentinelone.com/blog/eternalblue-nsa-developed-exploit-just-wont-die/).
+
+Desafortunadamente, todo software eventualmente pierde el soporte de sus mantenedores, se vuelve obsoleto y ya no recibe actualizaciones (por ejemplo, Windows 7); esto se conoce como que el software llega al EOL (fin de vida útil).. En este punto , el software debe reemplazarse lo antes posible. Si no es posible reemplazar el software, entonces el dispositivo debe aislarse lo más posible para evitar la explotación de las vulnerabilidades que inevitablemente se encontrarán y dejarán sin parchear.
+
+### Actualizaciones de antivirus
+La mayoría de los paquetes de software antivirus reciben actualizaciones muy frecuentemente; esto se debe a que funcionan en gran medida utilizando una base de datos local de firmas de exploits conocidas, que deben mantenerse actualizadas.
+
+En otras palabras: cuando se descubre un nuevo malware, se envía a los proveedores de antivirus que generan una "firma" que identifica este software malicioso en particular. Luego, estas firmas distribuyen a todos los sispositivos del planeta que usan el software antivirus, lo que garantiza que su solución antivirus instalada se mantenga actualizada con todo el malware (conocido) más reciente.
+
+Si no se permite que el software anttivirus se actualice, podrá detectar malwware mediante otros métodos. Sin embargo, la base de datos de firmas local quedará obsoleta rápidamente, lo que puede provocar que el software malicioso se escape. En resumen: si el antivirus quiere actualizarse, ¡déjelo!
+
+### Responda las preguntas a continuación
+- (Opcional) ¡Complete la sala azul en TryHackMe para ver usted mismo los efectos brutales del exploit Eternal Blue en acción contra una máquina sin parches!
+
 ## [Información] Conclusión
+Para concluir: existen muchas opciones diferentes para que un atacante malintencionado ataque tanto a individduos como a grupos de personas; sin embargo, existen soluciones para cada ataque.
+
+Una vez que haya completado esta sala, con suerte comprenderá un poco más sobre estos staques comunes y las defensas contra ellos. No necesita ser un experto en computadoras o ciberseguridad para mantenerse seguro en línea: las soluciones son simples y vale la pena adoptarlas en sus interacciones personales y profesionales en línea.
+
+### Responda las preguntas a continuación
+- ¡Complete la sala de ataques comunes!
