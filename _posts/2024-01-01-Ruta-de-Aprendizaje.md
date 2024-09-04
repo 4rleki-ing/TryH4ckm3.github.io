@@ -5,7 +5,7 @@ excerpt: "Desde los principios fundamentales hasta las técnicas avanzadas, esta
 date: 2024-08-31
 classes: wide
 header:
-  teaser: /assets/images/Ruta-Aprendizaje/Portada.jpg
+  teaser: https://4rleki-ing.github.io/TryH4ckm3.github.io/assets/images/Ruta-Aprendizaje/Portada.jpg
   teaser_home_page: true
 categories:
   - Ciberseguridad
