@@ -306,3 +306,5 @@ Aquí, vemos que al asignar telnet a un puerto no estándar, no forma parte de l
 Siempre tome nota de la información que encuentre durante su etapa de enumeración,de modo que pueda volver a consultarla cuando continúe para probar exploits.
 
 ## Explotando Telnet
+### Tipos de exploit de telnet
+Telnet, siendo un protocolo, es inseguro por las razones por las que hablamos anteriormente. Carece de cifrado, por lo que envía toda la comunicación sobre texto sin formato y, en su mayor parte, tiene un control de acceso deficiente. Sin embargo, hay CVE para sistemas de clientes y servidores de Telnet, por lo que al explotar puede verificar los que están en:
