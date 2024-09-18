@@ -117,3 +117,4 @@ Los métodos HTTP son una forma de que el cliente muestre la acción prevista al
 - ¿Qué método se utilizaría para eliminar una imagen que ha cargado en su cuenta? `DELETE`
 - ¿Qué método se utilizaría para ver un artículo de noticias? `GET`
 
+x
