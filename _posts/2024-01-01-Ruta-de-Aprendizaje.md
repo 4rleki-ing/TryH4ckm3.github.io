@@ -10,8 +10,8 @@ header:
 categories:
   - TryHackme
 tags:
-  - OSWP
-  - TryHackme
+  - Módulos
+  - Salas
 ---
 
 <p align="center">
