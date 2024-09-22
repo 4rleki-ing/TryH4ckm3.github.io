@@ -8,10 +8,8 @@ header:
   teaser: https://4rleki-ing.github.io/TryH4ckm3.github.io/assets/images/Ruta-Aprendizaje/Portada.jpg
   teaser_home_page: true
 categories:
-  - Ciberseguridad
   - TryHackme
 tags:
-  - Pentesting
   - OSWP
   - TryHackme
 ---
@@ -20,64 +18,86 @@ tags:
 <img src="https://4rleki-ing.github.io/TryH4ckm3.github.io/assets/images/Ruta-Aprendizaje/Aprende.png">
 </p>
 
-El contenido está guiado con ejércicios interactivos basados en escenarios del mundo real, desde hackear máquinas hasta investigar ataques, todo está cubierto.
-
-# Hoja de Ruta de Aprendizaje
-## Conceptos básicos de seguridad cibernética
-Adquiera las habilidades básicas necesarias para iniciarse en el mundo de la seguridad cibernética.
-
-- [Introducción a la Seguridad Ofensiva](https://4rleki-ing.github.io/TryH4ckm3.github.io/Introduccion-Seguridad-Ofensiva/)
-- [Introducción a la Seguridad Defensiva]()
-- [Carreras en el ámbito cibernético]()
-- [Principios de seguridad]()
-- [Gobernanza y Regulación]()
-- [Cadena de muerte cibernética (Cyber Kill Chain)]()
-
-## Habilidades Fundamentales
-Adquiera las habilidades fundamentales necesarias para ingresar a cualquier carrera en la industria.
-
-- [Fundamentos de Linux, Parte 1]()
-- [Conceptos básicos de Python]()
-- [Ataques Comunes]()
-- [¿Qué son las redes?]()
-- [Servicios de red]()
-- [Servicios de red 2]()
-- [HTTP en detalle]()
-- [DNS en detalle]()
-- [Cómo funcionan los sitios web]()
-- [Unificando todo]()
-
-## Habilidades profesionales en Ciberseguridad
-Domine las habilidades específicas necesarias para la carrera que le interesa.
-
-`Analista de Seguridad`: Domine sus primeros pasos para convertirse en analista de seguridad.
-
-- [Introducción al analista de seguridad junior]()
-- [DFIR: una introducción]()
-- [Introducción a IR e IM]()
-- [Introducción a SIEM]()
-- [Introducción a la seguridad de endpoints]()
-- [Introducción a la ingeniería de detección]()
-- [Fundamentos del análisis de tráfico]()
-- [Introducción a la inteligencia sobre amenazas cibernéticas]()
-- [Herramientas de inteligencia sobre amenazas]()
-
-`Probador de Penetración`: Domine sus primeros pasos para convertirse en probador de penetración.
-
-- [Fundamentos de pentesting]()
-- [Fundamentos del red team]()
-- [Compromisos del red team]()
-- [Reconocimiento activo]()
-- [Reconocimiento pasivo]()
+## Modulos
+- [Fundamentos de Linux]()
+- [Conceptos Básicos de Explotación de Redes]()
+- [Fundamentos de Hacking Web]()
+- [Criptografía]()
+- [Conceptos básicos de Explotación en Windows]()
+- [Shell y Escalada de Privilegios]()
+- [Explotación Informática Básica]()
+- [Gestión de Amenazas y Vulnerabilidades]()
+- [Operaciones de Seguridad y Monitoreo]()
+- [Emulación de Amenazas]()
+- [Respuesta a Incidentes y Análisis Forense]()
+- [Análisis de Malware]()
+- [Cómo funciona la Web]()
+- [Fundamentos de Red]()
+- [Introducción al Pentesting]()
+- [Burp Suite]()
+- [Investigación de Vulnerabilidades]()
+- [Metasploit]()
+- [Introducción al Hacking Web]()
+- [Seguridad de la red]()
 - [Nmap]()
-- [Introducción al Metasploit]()
+- [Escalada de Privilegios]()
+- [Acceso Inicial]()
+- [Phishing]()
+- [Concientización sobre la seguridad Cibernética]()
+- [Fundamentos de Red Team]()
+- [Introducción a la Seguridad Ofensiva]()
+- [Amenazas recientes]()
+- [Introducción a la Ciberseguridad]()
+- [Evasión de seguridad de la red]()
+- [Introducción a la Seguridad Defensiva]()
+- [Comprometer Active Directory]()
+- [Después del Compromiso]()
+- [Evasión del Host]()
+- [Frameworks de Ciberdefensa]()
+- [Wireshark]()
+- [Análisis Forense Digital y Respuesta a Incidentes]()
+- [Snort]()
+- [Inteligencia sobre amenazas Cibernéticas]()
+- [Monitoreo de Seguridad en Terminales]()
+- [Seguridad de Red y Análisis de tráfico]()
+- [Información de Seguridad y Gestión de Eventos]()
+- [Introducción a AWS]()
+- [Introducción a IAM]()
+- [Atacar y Defender Servicios Centrales]()
+- [Atacar y Defender sin Servidor]()
+- [Escalada de Privilegios en IAM]()
+- [Ingeniería de Detección]()
+- [Seguridad del Software]()
+- [Planificación y Alcance]()
+- [Herramientas y Análisis de Código]()
+- [Recopilación de Información y escaneo de vulnerabilidades]()
+- [Ataques y Exploits]()
+- [Introducción a la Ingeniería de Seguridad]()
+- [Amenazas y Riesgos]()
+- [Seguridad de Redes y Sistemas]()
+- [Gestión de Incidentes]()
+- [Análisis de Registros]()
+- [Splunk Avanzado]()
+- [ELK Avanzado]()
+- [Caza de Amenazas]()
+- [Emulación de Amenazas]()
+- [Respuesta a Incidentes]()
+- [Análisis de Malware]()
+- [Desarrollo de Software Seguro]()
+- [Misión Secundaria de AoC 2023]()
+- [Seguridad del Oleoducto]()
+- [Seguridad en el Oleoducto 2]()
+- [Infraestructura como Código]()
+- [Seguridad de Contenedores]()
+- [Contrabando de Solicitudes HTTP]()
+- [TryHack3M Especial]()
+- [Ataques Avanzados del  lado del cliente]()
+- [Ataques Avanzados del lado del Servidor]()
+- [Snyk]()
+- [Desafíos Finales de SOC 1]()
+- [Ataques de Inyección]()
+- [Investigación de Puntos Finales de Windows]()
+- [Endurecimiento de Kurbenetes]()
 
-`Ingeniero de Seguridad`: Domine sus primeros pasos para convertirse en ingeniero de seguridad.
-
-- [Introducción al ingeniero de seguridad]()
-- [Seguridad de aplicaciones web]()
-- [SDLC]()
-- [Introducción a la contenedorización]()
-- [Introducción a Docker]()
-- [Introducción a la automatización de pipelines]()
-- [Conceptos básicos de Active Directory]()
+## Salas
+- []
