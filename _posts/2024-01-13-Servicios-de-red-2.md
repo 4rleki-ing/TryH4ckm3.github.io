@@ -140,7 +140,7 @@ Ahora qye entendemos nuestras herramientas, ¡comencemos!
 
 ```text
 ┌──(kali㉿kali)-[~/Desktop/4rlekiing]
-└─$ nmap -A -Pn -T4 -p- 10.10.168.144   
+└─$ nmap -A -Pn -T4 -p- 10.10.168.144
 Starting Nmap 7.94SVN ( https://nmap.org ) at 2024-09-18 02:35 EDT
 Stats: 0:08:27 elapsed; 0 hosts completed (1 up), 1 undergoing Connect Scan
 Nmap scan report for 10.10.168.144
@@ -560,3 +560,29 @@ Ahora que cubrimos la teoría, ¡Comencemos!
 
 ### Responda las preguntas a continuación
 - Primero, ejecutemos un escaneo de puertos contra la máquina objetivo, igual que la última vez. ¿En qué puerto se ejecuta SMTP? ``
+
+- Bien, ahora que sabemos a qué puerto debemos apuntar, iniciemos Metasploit. ¿Qué comando usamos para hacer esto?
+
+- Si desea más ayuda o práctica con Metasploit, TryHackMe tiene un módulo sobre Metasploit que puede consultar [aquí](). Busquemos el módulo `smtp_version`, ¿cuál es el nombre completo del módulo?
+
+- Genial, ahora seleccione el módulo y enumere las opciones. ¿Cómo lo hacemos?
+
+- Eche un vistazo a las opciones, ¿todo parece correcto? ¿Cuál es la opción que necesitamos configurar?
+
+- Establezca el valor correcto para su máquina objetivo, Luego ejecute el exploit. ¿Cuál es el nombre del correo del sistema?
+
+- ¿Qué agente de transferencia de correo (MTA) está ejecutando el servidor SMTP? (Esto requerirá una investigación externa).
+
+- ¡Bien! Ahora tenemos una buena cantidad de información sobre el sistema objetivo para pasar a la siguiente etapa. Busquemos el módulo `smtp_enum`, ¿cuál es el nombre completo del módulo?
+
+- Vamos a utilizar la lista de palabras `top-usernames-shortlist.txt` de la subsección Nombres de usuario de seclists `/usr/share/wordlists/SecLists/Usernames` si ka tienes instalada.
+
+SecLists es una colección increíble de listas de palabras. Si estas ejecutando Kali o Parrot, puedes instalar seclists con `sudo apt install seclists`. Alternativamente, puedes descargar el repositorio desde [aquí]().
+
+- ¿Qué opción necesitamos configurar en la ruta de la lista de palabras?
+
+- Una vez que hemos configurado esta opción, ¿cuál es el otro parámetro esencial que necesitamos configurar?
+
+Ahora, ejecuta el exploit, esto pueede llevar unos minutos, así que toma una taza de té, café, agua. ¡Mantente hidratado!
+
+- ¡Bien! Ahora qye está terminado, ¿qué nombre de usuario se devuelve?
