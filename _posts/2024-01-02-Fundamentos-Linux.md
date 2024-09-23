@@ -2,7 +2,7 @@
 layout: single
 title: Fundamentos de Linux
 excerpt: "Muchos servidores y herramientas de seguridad utilizan Linux. Aprenda a utilizar el sistema operativo Linux, una habilidad fundamental en materia de ciberseguridad."
-date: 2024-08-30
+date: 2024-09-23
 classes: wide
 header:
   teaser: https://4rleki-ing.github.io/TryH4ckm3.github.io/assets/images/Fundamentos-Linux/Linux.png
