@@ -149,3 +149,90 @@ Ahora que sabemos qué carpetas existen, necesitamos usar el comando `cd` para c
 ¡En este caso, parece que hay 4 fotos de perros!
 
 ### Mostrar contenido de un archivo (cat)
+Si bien conocer la existencia de archivos es genial, no es tan útil a menos que podamos ver su contenido. Más adelante, analizaremos algunas de las herramientas disponibles que nos permiten transferir archivos de una máquina a otra. Pero por ahora, vamos a hablar simplemente sobre cómo ver el contenido de archivos de texto mediante el comando **cat**.
+
+`cat` es una forma fantástica de mostrar el contenido de archivos (¡no solo archivos de texto!). En la captura de pantalla a continuación, puede ver cómo se combinó el uso de `ls` para enumerar los archivos dentro de un directorio llamado *"Documents"*.
+
+<center>
+  <img src="https://4rleki-ing.github.io/TryH4ckm3.github.io/assets/images/Linux-1/cat.png" width="50%"> 
+</center>
+
+Hemos aplicado algunos conocimientos adquiridos anteriormente en esta tarea para hacer lo siguiente:
+
+1. Utilizamos `ls` para informarnos qué archivos están disponibles en la carpeta *"Documents"* de esta máquina. En este caso, se llama *"todo.txt"*.
+2. Luego, hemos utilizado `cat todo.txt` para concatenar (mostrar) el contenido del archivo *"todo.txt"*, donde el contenido es *"¡Aquí hay algo importante que debo hacer más tarde!"*.
+
+```text
+Consejo:
+  Puede utilizar "cat" para mostrar el contenido de un archivo dentro de directorios sin tener que navegar hasta él utilizando cat y el nombre del directorio.
+
+  Por ejemplo: cat /home/ubuntu/Documents/todo.txt
+```
+
+A veces, elementos como nombres de usuario, contraseñas, indicadores o ajustes de configuración se almacenan dentro de archivos donde se puede utilizar `cat` para recuperarlos.
+
+### Averiguar la ruta completa de un directorio (pwd)
+A medida que avanza en la navegación de su máquina Linux, notará que el nombre del directorio en el que está trabajando actualmente aparecerá en su terminal. Es fácil perder la pista de dónde se encuentra exactamente en el sistema de archivos, para solucionar este problema existe el comando `pwd`. Esto significa *"imprimir directorio de trabajo"*.
+
+Usando la máquina del ejemplo anterior, actualmente se encuentra en la carpeta *"Documents"*, pero ¿dónde está exactamente en el sistema de archivos de la máquina Linux?; Podemos averiguarlo usando el comando `pwd` como aparecerá en la siguiente captura de pantalla:
+
+<center>
+  <img src="https://4rleki-ing.github.io/TryH4ckm3.github.io/assets/images/Linux-1/pwd.png" width="50%"> 
+</center>
+
+Analicemos esto:
+1. Ya sabemos que estamos en *"Documents"* gracias a nuestra terminal, pero en este momento no tenemos idea de donde está almacenado *"Documents"* para que podamos volver a él fácilmente en el futuro.
+2. Se ha utilizado el comando `pwd` para encontrar la ruta completa del archivo de esta carpeta.
+3. Linux nos informa que el directorio *"Documents"* está almacenado en `/home/ubuntu/Documents` en la máquina. ¡Es bueno saberlo!
+4. Ahora, en el futuro, si nos encontramos en una ubicación diferente, podemos simplemente utilizar `cd /home/ubuntu/Documents` para cambiar nuestro directorio de trabajo al directorio *"Documents"*.
+
+### Responda las preguntas a continuación
+- En la máquina Linux que implementa, ¿cuántas carpetas hay? `4`
+- ¿Qué directorio contiene un archivo? `folder 4`
+- ¿Cuál es el contenido de este archivo? `Hello World`
+- Use el comando **cd** para navegar hasta este archivo y averiguar el nuevo directorio de trabajo actual. ¿Cuál es la ruta? `/home/tryhackme/folder4`
+
+## Búsqueda de archivos
+Aunque no lo parezca hasta ahora, una de las características positivas de Linux es lo eficiente que puede ser con él. Dicho esto, solo puede ser tan eficiente como lo conozca, por supuesto. A medida que interactúe con sistemas operativos como *Ubuntu* con el tiempo, los comandos esenciales como los que ya se cubrieron comenzarán a convertirse en *memoria muscular*.
+
+Una forma fantástica de mostrar cuán eficiente puede ser con sistemas como este es usar un conjunto de comandos para buscar rápidamente archivos en todo el sistema al que nuestro usuario tiene acceso. No es necesario usar constantemente `cd` y `ls` para averiguar qué está en cada lugar. En cambio, podemos usar comandos como `find` para automatizar cosas como esta para nosotros.
+
+Aquí es donde Linux comienza a volverse un poco más *intimidante* de abordar, pero lo desglosaremos y lo haremos más fácil.
+
+### Uso de find
+El comando `find` es fantástico en el sentido de que se puede usar de manera muy simple o *bastante compleja* según lo que desee hacer exactamente. Sin embargo, centrémonos primero en los aspectos básicos.
+
+Observe el fragmento que aparece a continuación; podemos ver una lista de directorios disponibles:
+
+<center>
+  <img src="https://4rleki-ing.github.io/TryH4ckm3.github.io/assets/images/Linux-1/find.png" width="50%"> 
+</center>
+
+1. Escritorio (Desktop)
+2. Documentos (Documents)
+3. Imagenes (Pictures)
+4. Carpeta 1 (folder 1)
+
+Ahora bien, los directorios pueden contener incluso más directorios dentro de sí mismos. Se convierte en un dolor de cabeza cuando tenemos que buscar en cada uno de ellos solo para intentar encontrar archivos específicos. ¡Podemos usar `find` para que haga exactamente esto por nosotros!
+
+Comencemos de manera sencilla y supongamos que ya sabemos el nombre del archivo que estamos buscando, ¡pero no podemos recordar dónde está exactamente! En este caso, estamos buscando `passwords.txt`.
+
+Si recordamos el nombre del archivo, podemos simplemente usar `find -name passwords.txt` donde el comando buscará en cada carpeta de nuestro directorio actual ese archivo específico de la siguiente manera:
+
+<center>
+  <img src="https://4rleki-ing.github.io/TryH4ckm3.github.io/assets/images/Linux-1/find-passwords.png" width="50%"> 
+</center>
+
+`find` ha logrado encontrar el archivo, resulta que se encuentra en `folder1/passwords.txt`, genial. Pero digamos que no sabemos el nombre del archivo o que queremos buscar todos los archivos que tengan una extensión como `.txt`; ¡*find* también nos permite hacer eso!
+
+Podemos simplemente usar lo que se conoce como `comodín (*)` para buscar cualquier cosa que tenga *.txt* al final.En nuestro caso, queremos encontrar todos los archivos *.txt* que se encuentran en nuestro directorio actual.
+
+Construiremos el comando `find -name *.txt`, donde *"find"* ha podido encontrar todos los archivos .txt y luego nos ha dado la ubicación de cada uno:
+
+<center>
+  <img src="https://4rleki-ing.github.io/TryH4ckm3.github.io/assets/images/Linux-1/find-all.png" width="50%"> 
+</center>
+
+find a logrado encontrar:
+- `passwords.txt` ubicado dentro de *"folder1"*
+- `todo.txt` ubicado dentro de *"Documents"*
