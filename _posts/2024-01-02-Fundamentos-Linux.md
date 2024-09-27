@@ -18,6 +18,6 @@ tags:
 Linux es uno de los principales sistemas operativos y se utiliza mucho en organizaciones de todo el mundo. Aprender a utilizar Linux es una competencia fundamental y le ayudará en su aventura de piratería no sólo a utilizar herramientas de seguridad basadas en Linux, sino también a utilizar y explotar el sistema operativo. Este módulo se centrará en que se sienta cómodo utilizando Linux.
 
 ## Contenido
-- [Fundamentos de Linux - Parte 1]()
+- [Fundamentos de Linux - Parte 1](https://4rleki-ing.github.io/TryH4ckm3.github.io/Fundamentos-Linux-1/)
 - [Fundamentos de Linux - Parte 2]()
 - [Fundamentos de Linux - Parte 3]()
