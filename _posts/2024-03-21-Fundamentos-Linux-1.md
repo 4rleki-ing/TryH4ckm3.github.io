@@ -49,7 +49,8 @@ De manera similar a cómo existen diferentes versiones de Windows (7, 8 y 10), e
 ## Interacción con su primera máquina Linux
 ```text
 Nota:
-   Esta sala tiene una máquina Linux Ubuntu con la que puede interactuar desde su navegador mientras sigue el material de esta sala.
+   Esta sala tiene una máquina Linux Ubuntu con la que puede interactuar desde su navegador mientras 
+   sigue el material de esta sala.
 ```
 
 Para comenzar la máquina de la sala, simplemente localice el botón verde `Iniciar máquina` en la parte superior derecha de la tarea y presionelo.
@@ -59,3 +60,25 @@ Para comenzar la máquina de la sala, simplemente localice el botón verde `Inic
 Una vez desplegada, aparecerá una tarjeta en la parte superior de la sala:
 
 <img src="https://4rleki-ing.github.io/TryH4ckm3.github.io/assets/images/Linux-1/Maquina-Desplegada.png">
+
+Contiene toda la información de la máquina implementada en la sala, incluida la `dirección IP` y el `temporizador de expiración`, junto con los botones para administrar la máquina. Recuerde `Terminar` la máquina una vez que haya terminado con la sala. Puede encontrar más información sobre esto en la sala [tutoriales](https://tryhackme.com/r/room/tutorial).
+
+Por ahora, presione *Iniciar Máquina* donde podrá interactuar con su propia máquina Linux dentro de su navegador mientras sigue esta sala:
+
+<img src="https://4rleki-ing.github.io/TryH4ckm3.github.io/assets/images/Linux-1/Interactuar.png">
+
+## Ejecutar los primeros comandos
+Como ya hemos comentado, uno de los puntos fuertes de los sistemas operativos como *Ubuntu* es su ligereza. Por supuesto, esto no está exento de desventajas, como por ejemplo que, a menudo, no existe una ***interfaz gráfica de usuario (GUI)*** o lo que también se conoce como entorno de escritorio que podamos utilizar para interactuar con la máquina (a menos de que esté instalada). Una gran parte de la interacción con estos sistemas consiste en utilizar la **Terminal**.
+
+La `Terminal` se basa exclusivamente en texto y, al principio, resulta intimidante. Sin embargo, si analizamos algunos de los comandos, después de un tiempo, ¡rápidamente te familiarizarás con el uso de la terminal!
+
+![Comandos](https://4rleki-ing.github.io/TryH4ckm3.github.io/assets/images/Linux-1/Comandos.png)
+
+Necesitamos poder realizar funciones básicas como navegar hasta los archivos, mostrar su contenido y crear archivos. Los comandos para hacerlo se explican por sí solos (una vez que sepas qué son, por supuesto ...)
+
+Comencemos con 2 de los primeros comandos que he desglosado en la siguiente tabla:
+
+| Comando | Descripción                                                 |
+|---------|-------------------------------------------------------------|
+| echo    | Muestra cualquier texto que le proporcionemos               |
+| whoami  | ¡Descubre con qué usuario estamos conectados actualmente    |
