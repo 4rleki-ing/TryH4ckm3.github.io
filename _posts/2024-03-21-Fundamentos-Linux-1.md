@@ -13,7 +13,7 @@ tags:
   - Linux
 ---
 
-<img src="https://4rleki-ing.github.io/TryH4ckm3.github.io/assets/images/Linux-1/Portada.jpg">
+![Portada](https://4rleki-ing.github.io/TryH4ckm3.github.io/assets/images/Linux-1/Portada.jpg)
 
 Bienvenidos a la primera parte de la serie de salas `Fundamentos de Linux`. Probablemente esté usando una máquina *Windows* o *Mac*, ambas son diferentes en diseño visual y en su funcionamiento. Al igual que Windows, iOS y MacOS, **Linux** es solo otro sistema operativo y uno de los más populares del mundo que impulsa autos inteligentes, dispositivos Android, supercomputadoras, electrodomésticos, servidores empresariales y más.
 
@@ -55,22 +55,25 @@ Nota:
 
 Para comenzar la máquina de la sala, simplemente localice el botón verde `Iniciar máquina` en la parte superior derecha de la tarea y presionelo.
 
-<img src="https://4rleki-ing.github.io/TryH4ckm3.github.io/assets/images/Linux-1/Iniciar-maquina.png">
+<center>
+  <img src="https://4rleki-ing.github.io/TryH4ckm3.github.io/assets/images/Linux-1/Iniciar-maquina.png">
+</center>
 
 Una vez desplegada, aparecerá una tarjeta en la parte superior de la sala:
 
-<img src="https://4rleki-ing.github.io/TryH4ckm3.github.io/assets/images/Linux-1/Maquina-Desplegada.png">
+![Máquina Desplegada](https://4rleki-ing.github.io/TryH4ckm3.github.io/assets/images/Linux-1/Maquina-Desplegada.png)
 
 Contiene toda la información de la máquina implementada en la sala, incluida la `dirección IP` y el `temporizador de expiración`, junto con los botones para administrar la máquina. Recuerde `Terminar` la máquina una vez que haya terminado con la sala. Puede encontrar más información sobre esto en la sala [tutoriales](https://tryhackme.com/r/room/tutorial).
 
 Por ahora, presione *Iniciar Máquina* donde podrá interactuar con su propia máquina Linux dentro de su navegador mientras sigue esta sala:
 
-<img src="https://4rleki-ing.github.io/TryH4ckm3.github.io/assets/images/Linux-1/Interactuar.png">
+![Interactuar con la máquina](https://4rleki-ing.github.io/TryH4ckm3.github.io/assets/images/Linux-1/Interactuar.png)
 
 ## Ejecutar los primeros comandos
 Como ya hemos comentado, uno de los puntos fuertes de los sistemas operativos como *Ubuntu* es su ligereza. Por supuesto, esto no está exento de desventajas, como por ejemplo que, a menudo, no existe una ***interfaz gráfica de usuario (GUI)*** o lo que también se conoce como entorno de escritorio que podamos utilizar para interactuar con la máquina (a menos de que esté instalada). Una gran parte de la interacción con estos sistemas consiste en utilizar la **Terminal**.
 
 La `Terminal` se basa exclusivamente en texto y, al principio, resulta intimidante. Sin embargo, si analizamos algunos de los comandos, después de un tiempo, ¡rápidamente te familiarizarás con el uso de la terminal!
+
 <center>
   <img src="https://4rleki-ing.github.io/TryH4ckm3.github.io/assets/images/Linux-1/Comandos.png" width="50%"> 
 </center>
