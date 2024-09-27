@@ -2,7 +2,7 @@
 layout: single
 title: Monitoreo de Seguridad en Terminales
 excerpt: "."
-date: 2024-07-22
+date: 2024-08-18
 classes: wide
 header:
   teaser: https://4rleki-ing.github.io/TryH4ckm3.github.io/assets/images/Explotacion-Redes/Explotacion.png

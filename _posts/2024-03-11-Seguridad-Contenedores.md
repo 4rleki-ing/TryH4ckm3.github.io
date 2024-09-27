@@ -2,7 +2,7 @@
 layout: single
 title: Seguridad de Contenedores
 excerpt: "."
-date: 2024-08-27
+date: 2024-07-19
 classes: wide
 header:
   teaser: https://4rleki-ing.github.io/TryH4ckm3.github.io/assets/images/Explotacion-Redes/Explotacion.png

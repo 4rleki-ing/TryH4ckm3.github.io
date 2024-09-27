@@ -2,7 +2,7 @@
 layout: single
 title: HTTP en detalle
 excerpt: "."
-date: 2024-09-12
+date: 2024-06-22
 classes: wide
 header:
   teaser: https://4rleki-ing.github.io/TryH4ckm3.github.io/assets/images/Explotacion-Redes/Explotacion.png

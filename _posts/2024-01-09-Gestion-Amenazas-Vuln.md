@@ -2,7 +2,7 @@
 layout: single
 title: Gestión de Amenazas y Vulnerabilidades
 excerpt: "."
-date: 2024-08-23
+date: 2024-09-19
 classes: wide
 header:
   teaser: https://4rleki-ing.github.io/TryH4ckm3.github.io/assets/images/Explotacion-Redes/Explotacion.png

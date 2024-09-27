@@ -2,7 +2,7 @@
 layout: single
 title: Fundamentos de Hacking Web
 excerpt: "Comprenda los problemas de seguridad principales con las aplicaciones web y aprenda cómo explotarlos utilizando herramientas y técnicas de la industria."
-date: 2024-08-28
+date: 2024-09-24
 classes: wide
 header:
   teaser: https://4rleki-ing.github.io/TryH4ckm3.github.io/assets/images/Explotacion-Redes/Explotacion.png

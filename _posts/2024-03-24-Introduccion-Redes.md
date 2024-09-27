@@ -2,7 +2,7 @@
 layout: single
 title: Introducción a las Redes
 excerpt: "."
-date: 2024-09-17
+date: 2024-06-27
 classes: wide
 header:
   teaser: https://4rleki-ing.github.io/TryH4ckm3.github.io/assets/images/Explotacion-Redes/Explotacion.png

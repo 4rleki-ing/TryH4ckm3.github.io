@@ -2,7 +2,7 @@
 layout: single
 title: Introducción a IAM
 excerpt: "."
-date: 2024-07-18
+date: 2024-08-14
 classes: wide
 header:
   teaser: https://4rleki-ing.github.io/TryH4ckm3.github.io/assets/images/Explotacion-Redes/Explotacion.png

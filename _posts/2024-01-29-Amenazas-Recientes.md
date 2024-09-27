@@ -2,7 +2,7 @@
 layout: single
 title: Amenazas recientes
 excerpt: "."
-date: 2024-08-03
+date: 2024-08-30
 classes: wide
 header:
   teaser: https://4rleki-ing.github.io/TryH4ckm3.github.io/assets/images/Explotacion-Redes/Explotacion.png

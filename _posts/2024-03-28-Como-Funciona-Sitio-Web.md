@@ -2,7 +2,7 @@
 layout: single
 title: Cómo funcionan los sitios web
 excerpt: "."
-date: 2024-09-13
+date: 2024-06-23
 classes: wide
 header:
   teaser: https://4rleki-ing.github.io/TryH4ckm3.github.io/assets/images/Explotacion-Redes/Explotacion.png

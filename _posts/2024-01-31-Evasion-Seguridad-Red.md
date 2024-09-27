@@ -2,7 +2,7 @@
 layout: single
 title: Evasión de seguridad de la red
 excerpt: "."
-date: 2024-08-01
+date: 2024-08-28
 classes: wide
 header:
   teaser: https://4rleki-ing.github.io/TryH4ckm3.github.io/assets/images/Explotacion-Redes/Explotacion.png

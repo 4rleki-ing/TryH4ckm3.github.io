@@ -2,7 +2,7 @@
 layout: single
 title: Conceptos básicos de Explotación en Windows
 excerpt: "."
-date: 2024-08-26
+date: 2024-09-22
 classes: wide
 header:
   teaser: https://4rleki-ing.github.io/TryH4ckm3.github.io/assets/images/Explotacion-Redes/Explotacion.png

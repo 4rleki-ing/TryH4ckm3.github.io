@@ -2,7 +2,7 @@
 layout: single
 title: Shell y Escalada de Privilegios
 excerpt: "."
-date: 2024-08-25
+date: 2024-09-21
 classes: wide
 header:
   teaser: https://4rleki-ing.github.io/TryH4ckm3.github.io/assets/images/Explotacion-Redes/Explotacion.png

@@ -2,7 +2,7 @@
 layout: single
 title: Burp Suite
 excerpt: "."
-date: 2024-08-15
+date: 2024-09-11
 classes: wide
 header:
   teaser: https://4rleki-ing.github.io/TryH4ckm3.github.io/assets/images/Explotacion-Redes/Explotacion.png

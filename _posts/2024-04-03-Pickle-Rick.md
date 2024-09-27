@@ -2,7 +2,7 @@
 layout: single
 title: Pickle Rick
 excerpt: "."
-date: 2024-09-07
+date: 2024-06-17
 classes: wide
 header:
   teaser: https://4rleki-ing.github.io/TryH4ckm3.github.io/assets/images/Explotacion-Redes/Explotacion.png

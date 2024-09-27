@@ -2,7 +2,7 @@
 layout: single
 title: Concientización sobre la seguridad Cibernética
 excerpt: "."
-date: 2024-08-06
+date: 2024-09-02
 classes: wide
 header:
   teaser: https://4rleki-ing.github.io/TryH4ckm3.github.io/assets/images/Explotacion-Redes/Explotacion.png

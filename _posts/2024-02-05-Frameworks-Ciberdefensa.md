@@ -2,7 +2,7 @@
 layout: single
 title: Frameworks de Ciberdefensa
 excerpt: "."
-date: 2024-07-27
+date: 2024-08-23
 classes: wide
 header:
   teaser: https://4rleki-ing.github.io/TryH4ckm3.github.io/assets/images/Explotacion-Redes/Explotacion.png

@@ -2,7 +2,7 @@
 layout: single
 title: Fundamentos de Linux Parte 2
 excerpt: "."
-date: 2024-09-19
+date: 2024-06-29
 classes: wide
 header:
   teaser: https://4rleki-ing.github.io/TryH4ckm3.github.io/assets/images/Explotacion-Redes/Explotacion.png

@@ -2,7 +2,7 @@
 layout: single
 title: Conceptos básicos de explotación de red
 excerpt: "Comprender, enumerar y atacar varios servicios de redes en entornos del mundo real."
-date: 2024-08-29
+date: 2024-09-25
 classes: wide
 header:
   teaser: https://4rleki-ing.github.io/TryH4ckm3.github.io/assets/images/Explotacion-Redes/Explotacion.png

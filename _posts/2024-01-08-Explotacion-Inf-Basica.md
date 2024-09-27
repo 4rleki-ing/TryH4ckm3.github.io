@@ -2,7 +2,7 @@
 layout: single
 title: Explotación Informática Básica
 excerpt: "."
-date: 2024-08-24
+date: 2024-09-20
 classes: wide
 header:
   teaser: https://4rleki-ing.github.io/TryH4ckm3.github.io/assets/images/Explotacion-Redes/Explotacion.png

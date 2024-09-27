@@ -2,7 +2,7 @@
 layout: single
 title: Acceso Inicial
 excerpt: "."
-date: 2024-08-08
+date: 2024-09-04
 classes: wide
 header:
   teaser: https://4rleki-ing.github.io/TryH4ckm3.github.io/assets/images/Explotacion-Redes/Explotacion.png

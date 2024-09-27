@@ -2,7 +2,7 @@
 layout: single
 title: Introducción a la Ciberseguridad
 excerpt: "."
-date: 2024-08-02
+date: 2024-08-29
 classes: wide
 header:
   teaser: https://4rleki-ing.github.io/TryH4ckm3.github.io/assets/images/Explotacion-Redes/Explotacion.png
