@@ -71,8 +71,9 @@ Por ahora, presione *Iniciar Máquina* donde podrá interactuar con su propia m�
 Como ya hemos comentado, uno de los puntos fuertes de los sistemas operativos como *Ubuntu* es su ligereza. Por supuesto, esto no está exento de desventajas, como por ejemplo que, a menudo, no existe una ***interfaz gráfica de usuario (GUI)*** o lo que también se conoce como entorno de escritorio que podamos utilizar para interactuar con la máquina (a menos de que esté instalada). Una gran parte de la interacción con estos sistemas consiste en utilizar la **Terminal**.
 
 La `Terminal` se basa exclusivamente en texto y, al principio, resulta intimidante. Sin embargo, si analizamos algunos de los comandos, después de un tiempo, ¡rápidamente te familiarizarás con el uso de la terminal!
-
-![Comandos](https://4rleki-ing.github.io/TryH4ckm3.github.io/assets/images/Linux-1/Comandos.png)
+<center>
+  <img src="https://4rleki-ing.github.io/TryH4ckm3.github.io/assets/images/Linux-1/Comandos.png" width="50%"> 
+</center>
 
 Necesitamos poder realizar funciones básicas como navegar hasta los archivos, mostrar su contenido y crear archivos. Los comandos para hacerlo se explican por sí solos (una vez que sepas qué son, por supuesto ...)
 
