@@ -74,9 +74,7 @@ Como ya hemos comentado, uno de los puntos fuertes de los sistemas operativos co
 
 La `Terminal` se basa exclusivamente en texto y, al principio, resulta intimidante. Sin embargo, si analizamos algunos de los comandos, después de un tiempo, ¡rápidamente te familiarizarás con el uso de la terminal!
 
-<center>
   <img src="https://4rleki-ing.github.io/TryH4ckm3.github.io/assets/images/Linux-1/Comandos.png" width="50%"> 
-</center>
 
 Necesitamos poder realizar funciones básicas como navegar hasta los archivos, mostrar su contenido y crear archivos. Los comandos para hacerlo se explican por sí solos (una vez que sepas qué son, por supuesto ...)
 
@@ -90,14 +88,10 @@ Comencemos con 2 de los primeros comandos que he desglosado en la siguiente tabl
 Vea los fragmentos a continuación para ver un ejemplo de cómo se utiliza cada comando:
 
 - `echo`
-<center>
   <img src="https://4rleki-ing.github.io/TryH4ckm3.github.io/assets/images/Linux-1/echo.png" width="50%"> 
-</center>
 
 - `whoami`
-<center>
-  <img src="https://4rleki-ing.github.io/TryH4ckm3.github.io/assets/images/Linux-1/whoami.png" width="50%"> 
-</center>
+  <img src="https://4rleki-ing.github.io/TryH4ckm3.github.io/assets/images/Linux-1/whoami.png" width="45%"> 
 
 ### Responda las preguntas a continuación
 - Si quisiéramos mostrar el texto "TryHackMe", ¿cuál sería nuestro comando? `echo TryHackMe`
@@ -122,7 +116,7 @@ Como se mencionó anteriormente, poder navegar por la máquina en la que ha inic
 Antes de poder hacer algo como averiguar el contenido de cualquier archivo o carpeta, necesitamos saber qué existe en primer lugar. Esto se puede hacer usando el comando `ls`.
 
 <center>
-  <img src="https://4rleki-ing.github.io/TryH4ckm3.github.io/assets/images/Linux-1/ls.png" width="50%"> 
+  <img src="https://4rleki-ing.github.io/TryH4ckm3.github.io/assets/images/Linux-1/ls.png" width="55%"> 
 </center>
 
 En la captura de pantalla anterior, podemos ver que hay los siguientes directorios (carpetas):
@@ -136,14 +130,16 @@ En la captura de pantalla anterior, podemos ver que hay los siguientes directori
 
 ```text
 Consejo:
-  Puedes enumerar el contenido de un directorio sin tener que navegar hasta él usando ls y el nombre del directorio, (por ejemplo: ls Pictures)
+  Puedes enumerar el contenido de un directorio sin tener que navegar hasta él usando ls y el nombre del directorio.
+  
+  Por ejemplo: ls Pictures
 ```
 
 ### Cambiar directorio (cd)
 Ahora que sabemos qué carpetas existen, necesitamos usar el comando `cd` para cambiar a ese directorio. Digamos que queremos abrir el directorio *Pictures*, usaría `cd Pictures`. Nuevamente, queremos averiguar el contenido de este directorio *(Pictures)* y para ello usaríamos `ls` nuevamente:
 
 <center>
-  <img src="https://4rleki-ing.github.io/TryH4ckm3.github.io/assets/images/Linux-1/cd.png" width="50%"> 
+  <img src="https://4rleki-ing.github.io/TryH4ckm3.github.io/assets/images/Linux-1/cd.png" width="70%"> 
 </center>
 
 ¡En este caso, parece que hay 4 fotos de perros!
@@ -164,7 +160,8 @@ Hemos aplicado algunos conocimientos adquiridos anteriormente en esta tarea para
 
 ```text
 Consejo:
-  Puede utilizar "cat" para mostrar el contenido de un archivo dentro de directorios sin tener que navegar hasta él utilizando cat y el nombre del directorio.
+  Puede utilizar "cat" para mostrar el contenido de un archivo dentro de directorios sin tener que navegar hasta él 
+    utilizando cat y el nombre del directorio.
 
   Por ejemplo: cat /home/ubuntu/Documents/todo.txt
 ```
@@ -205,7 +202,7 @@ El comando `find` es fantástico en el sentido de que se puede usar de manera mu
 Observe el fragmento que aparece a continuación; podemos ver una lista de directorios disponibles:
 
 <center>
-  <img src="https://4rleki-ing.github.io/TryH4ckm3.github.io/assets/images/Linux-1/find.png" width="50%"> 
+  <img src="https://4rleki-ing.github.io/TryH4ckm3.github.io/assets/images/Linux-1/find.png" width="60%"> 
 </center>
 
 1. Escritorio (Desktop)
@@ -220,7 +217,7 @@ Comencemos de manera sencilla y supongamos que ya sabemos el nombre del archivo 
 Si recordamos el nombre del archivo, podemos simplemente usar `find -name passwords.txt` donde el comando buscará en cada carpeta de nuestro directorio actual ese archivo específico de la siguiente manera:
 
 <center>
-  <img src="https://4rleki-ing.github.io/TryH4ckm3.github.io/assets/images/Linux-1/find-passwords.png" width="50%"> 
+  <img src="https://4rleki-ing.github.io/TryH4ckm3.github.io/assets/images/Linux-1/find-passwords.png" width="55%"> 
 </center>
 
 `find` ha logrado encontrar el archivo, resulta que se encuentra en `folder1/passwords.txt`, genial. Pero digamos que no sabemos el nombre del archivo o que queremos buscar todos los archivos que tengan una extensión como `.txt`; ¡*find* también nos permite hacer eso!
