@@ -85,4 +85,67 @@ Comencemos con 2 de los primeros comandos que he desglosado en la siguiente tabl
 | Comando | Descripción                                                 |
 |---------|-------------------------------------------------------------|
 | echo    | Muestra cualquier texto que le proporcionemos               |
-| whoami  | ¡Descubre con qué usuario estamos conectados actualmente    |
+| whoami  | ¡Descubre con qué usuario estamos conectados actualmente!   |
+
+Vea los fragmentos a continuación para ver un ejemplo de cómo se utiliza cada comando:
+
+- `echo`
+<center>
+  <img src="https://4rleki-ing.github.io/TryH4ckm3.github.io/assets/images/Linux-1/echo.png" width="50%"> 
+</center>
+
+- `whoami`
+<center>
+  <img src="https://4rleki-ing.github.io/TryH4ckm3.github.io/assets/images/Linux-1/whoami.png" width="50%"> 
+</center>
+
+### Responda las preguntas a continuación
+- Si quisiéramos mostrar el texto "TryHackMe", ¿cuál sería nuestro comando? `echo TryHackMe`
+- ¿Cuál es el nombre de usuario con el que inició sesión en su máquina Linux implementada? `tryhackme`
+
+## Interacción con el sistema de archivos
+Hasta ahora, solo hemos cubierto los comandos `echo` y `whoami`. No son tan útiles si tenemos en cuenta las cosas que tenemos que hacer, como navegar por el sistema de archivos, leer y escribir en él.
+
+En esta tarea, aprenderemos los comandos para poder hacer precisamente eso. Al igual que en la tarea anterior, se mostrará los comandos en la tabla del siguiente encabezado y se mostrará ejemplos de su uso.
+
+### Interacción con el sistema de archivos
+Como se mencionó anteriormente, poder navegar por la máquina en la que ha iniciado sesión sin depender de un entorno de escritorio es bastante importante. Después de todo, *¿qué sentido tiene iniciar sesión si no podemos ir a ningún lado?*
+
+| Comando | Nombre Completo                                              |
+|---------|--------------------------------------------------------------|
+|   ls    | Listado (listing)                                            |
+|   cd    | Cambiar directorio (change directory)                        |
+|   cat   | Concatenar (concatenate)                                     |
+|   pwd   | Directorio de Trabajo de Impresión (print working directory) |
+
+### Listado de archivos (ls)
+Antes de poder hacer algo como averiguar el contenido de cualquier archivo o carpeta, necesitamos saber qué existe en primer lugar. Esto se puede hacer usando el comando `ls`.
+
+<center>
+  <img src="https://4rleki-ing.github.io/TryH4ckm3.github.io/assets/images/Linux-1/ls.png" width="50%"> 
+</center>
+
+En la captura de pantalla anterior, podemos ver que hay los siguientes directorios (carpetas):
+
+- Archivos importantes (Important Files)
+- Mis documentos (My Documents)
+- Notas (Notes)
+- Imagenes (Pictures)
+
+¡Genial! Probablemente puedas adivinar qué información o archivos esperar que contenga una carpeta según su nombre.
+
+```text
+Consejo:
+  Puedes enumerar el contenido de un directorio sin tener que navegar hasta él usando ls y el nombre del directorio, (por ejemplo: ls Pictures)
+```
+
+### Cambiar directorio (cd)
+Ahora que sabemos qué carpetas existen, necesitamos usar el comando `cd` para cambiar a ese directorio. Digamos que queremos abrir el directorio *Pictures*, usaría `cd Pictures`. Nuevamente, queremos averiguar el contenido de este directorio *(Pictures)* y para ello usaríamos `ls` nuevamente:
+
+<center>
+  <img src="https://4rleki-ing.github.io/TryH4ckm3.github.io/assets/images/Linux-1/cd.png" width="50%"> 
+</center>
+
+¡En este caso, parece que hay 4 fotos de perros!
+
+### Mostrar contenido de un archivo (cat)
