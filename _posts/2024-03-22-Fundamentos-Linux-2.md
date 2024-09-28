@@ -5,13 +5,13 @@ excerpt: "."
 date: 2024-06-29
 classes: wide
 header:
-  teaser: https://4rleki-ing.github.io/TryH4ckm3.github.io/assets/images/Explotacion-Redes/Explotacion.png
+  teaser: https://4rleki-ing.github.io/TryH4ckm3.github.io/assets/images/Linux-2/Linux.png
   teaser_home_page: true
 categories:
   - Lectura
 tags:
-  - Redes
+  - Linux
 ---
 
-<img src="https://4rleki-ing.github.io/TryH4ckm3.github.io/assets/images/Explotacion-Redes/Portada.jpg">
+![Portada](https://4rleki-ing.github.io/TryH4ckm3.github.io/assets/images/Linux-1/Portada.jpg)
 

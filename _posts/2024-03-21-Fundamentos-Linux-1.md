@@ -267,12 +267,62 @@ En una visión general, voy a mostrar los siguientes operadores:
 |        >>        | Este operador hace la misma función del operador ">" pero agrega la salida en lugar de reemplazar (lo que significa que no se sobrescribe nada). |
 
 ### Operador "&"
+Este operador nos permite ejecutar comandos en segundo plano. Por ejemplo, supongamos que queremos copiar un archivo grande. Obviamente, esto llevará bastante tiempo y nos dejará incapaz de hacer nada más hasta que el archivo se copie con éxito.
 
+¡El operador `&` nos permite ejecutar un comando y hacer que se ejecute en segundo plano (como esta copia del archivo), lo que nos permite hacer otras cosas!
 
 ### Operador "&&"
-
+Este operador es un poco engañoso en el sentido de cuán familiar es para su compañero `&`. A diferencia del operador *"&"*, podemos usar *"&&"* para hacer una lista de comandos para ejecutar; por ejemplo, `Command1 && Command2`. Sin embargo, vale la pena señalar que *Command2* solo se ejecutará si *Command1* fue exitoso.
 
 ### Operador ">"
+Este operador es lo que se conoce como un redireccionador de salida. Básicamente, esto significa que tomamos la salida de un comando que ejecutamos y enviamos esa salida a otro lugar. Un gran ejemplo de esto es redirigir la salida del comando `echo` que aprendimos en la *tarea 4*. Por supuesto, ejecutar algo como `echo howdy` devolverá *"howdy"* a nuestra terminal, lo que no es muy útil. Lo que podemos hacer en cambio es redirigir *"howdy"* a algo como un nuevo archivo.
 
+Digamos que queremos crear un archivo llamado *"welcome"* con el mensaje *"hey"*. Podemos ejecutar `eccho hey > welcome` donde queremos que see cree el archivo con el contenido *"hey"* de la siguiente manera:
+
+<center>
+  <img src="https://4rleki-ing.github.io/TryH4ckm3.github.io/assets/images/Linux-1/echo-1.png" width="50%"> 
+</center>
+
+<center>
+  <img src="https://4rleki-ing.github.io/TryH4ckm3.github.io/assets/images/Linux-1/cat-welcome.png" width="50%"> 
+</center>
+
+```text
+Nota:
+  Si el archivo "welcome" ya existe, el contenido se sobrescribirá.
+```
 
 ### Operador ">>"
+Este operador también es un redireccionador de salida como el operador anterior *">"* que analizamos. Sin embargo, lo que hace que este operador sea diferente es que en lugar de sobrescribir cualquier contenido dentro de un archivo, por ejemplo, simplemente coloca la salida al final.
+
+Siguiendo con nuestro ejemplo anterior donde tenemos el archivo *"welcome"* que tiene el contenido de *"hey"*. Si usáramos **echo** para agregar *"hello"* al archivo usando el operador `>`, el archivo ahora solo tendrá *"hello"* y no *"hey"*.
+
+El operador `>>` permite agregar la salida al final del archivo, en lugar de reemplazar el contenido de la siguiente manera:
+
+<center>
+  <img src="https://4rleki-ing.github.io/TryH4ckm3.github.io/assets/images/Linux-1/echo-2.png" width="50%"> 
+</center>
+
+<center>
+  <img src="https://4rleki-ing.github.io/TryH4ckm3.github.io/assets/images/Linux-1/cat-welcome-2.png" width="50%"> 
+</center>
+
+### Responda las preguntas a continuación
+- Si quisiéramos ejecutar un comando en segundo plano, ¿Qué operador usaríamos? `&`
+- Si quisiera reemplazar el contenido de un archivo llamado *"passwords"* con la palabra *"password123"*, ¿Cuál sería el comando? `echo password123 > passwords`
+- Ahora bien, si quisiera agregar *"tryhackme"* a este archivo llamado *"passwords"* pero también conservar *"password123"*, ¿Cuál sería el comando' `echo tryhackme >> passwords`
+
+## Conclusiones
+¡Buen trabajo al llegar a esta etapa! Hemos cubierto bastante para sus primeras interacciones con Linux. Sin embargo, estas son las funciones más esenciales que usará cada vez que interactúe con una máquina Linux.
+
+Espero que esta sala no haya sido demasiado abrumadora para que pueda comenzar. Como mencioné anteriormente, se familiarizará con estas cosas muy rápidamente debido a la frecuencia con la que las usará.
+
+Para resumir rápidamente, hemos cubierto lo siguiente:
+
+- Comprender por qué Linux es tan común hoy en día.
+- ¡Interactuar con su primera máquina Linux!
+- Ejecutar algunos de los comandos más fundamentales.
+- Recibir una introducción sobre cómo navegar por el sistema de archivos y cómo podemos usar comandos como *find* y *grep* para hacer que la búsqueda de datos sea aún más eficiente.
+- Mejore sus comandos aprendiendo sobre algunos de los operadores de shell importantes.
+
+Tómese un tiempo para jugar un poco en esta sala. Cuando se sienta un poco más cómodo, avance a la `Parte 2 de Fundamentos de Linux`.
