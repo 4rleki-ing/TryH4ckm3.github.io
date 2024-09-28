@@ -255,3 +255,13 @@ Podemos usar `grep` para buscar dentro del contenido completo de este archivo cu
 - Use *"grep"* en **"Access.log"** para encontrar la bandera que tiene un prefijo de *"THM"*. ¿Cuál es el contenido de la bandera? `THM{ACCESS}`
 
 ## Introducción a los operadores Shell
+Los operadores de Linux son una forma fantástica de alimentar su conocimiento de trabajar con Linux. Hay algunos operadores importantes que vale la pena señalar. Cubriremos los conceptos básicos y los desglosaremos en consecuencia en trozos del tamaño de un bocado.
+
+En una visión general, voy a mostrar los siguientes operadores:
+
+| Símbolo/Operador | Descripción                                                                                          |
+|------------------|------------------------------------------------------------------------------------------------------|
+|        &         | Este operador le permite ejecutar comandos en el fondo de su terminal                                |
+|        &&        | Este operador le permite combinar múltiples comandos en una línea de su terminal.                    |
+|        >         | Este operador es un redirector, lo que significa que podemos tomar la salida de un comando (como usar "cat" para emitir un archivo) y dirigirlo en otro lugar. |
+|        >>        | Este operador hace la misma función del operador ">" pero agrega la salida en lugar de reemplazar (lo que significa que no se sobrescribe nada). |
