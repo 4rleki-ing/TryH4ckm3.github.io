@@ -233,3 +233,25 @@ Construiremos el comando `find -name *.txt`, donde *"find"* ha podido encontrar 
 find a logrado encontrar:
 - `passwords.txt` ubicado dentro de *"folder1"*
 - `todo.txt` ubicado dentro de *"Documents"*
+
+### Uso de Grep
+Otra gran utilidad que vale la pena aprender es el uso de `grep`. El comando *grep* nos permite buscar en el contenido de los archivos valores específicos que estamos buscando. Tomemos como ejemplo el registro de acceso de un servidor web. En este caso, el archivo `access.log` de un servidor web tiene 244 entradas.
+
+<center>
+  <img src="https://4rleki-ing.github.io/TryH4ckm3.github.io/assets/images/Linux-1/grep.png" width="50%"> 
+</center>
+
+Usar el comando `cat`no funcionará como esperamos en esta situación. Digamos, por ejemplo, si queremos buscar en este archivo de registro para ver los sitios que visitó una determinada *dirección de usuario/IP*. Mirar a través de 244 entradas no es tan eficiente teniendo en cuenta que queremos encontrar un valor específico.
+
+Podemos usar `grep` para buscar dentro del contenido completo de este archivo cualquier entrada del valor que estamos buscando. Con el ejemplo del registro de acceso de un servidor web, queremos ver todo lo que ha visitado la dirección IP `81.143.211.90`.
+
+<center>
+  <img src="https://4rleki-ing.github.io/TryH4ckm3.github.io/assets/images/Linux-1/grep-access.png" width="50%"> 
+</center>
+
+`Grep` ha buscado a través de este archivo y nos ha mostrado cualquier entrada que coincida con los valores que hemos proporcionado y que está contenido en este archivo de registro para la IP.
+
+### Responda las preguntas a continuación
+- Use *"grep"* en **"Access.log"** para encontrar la bandera que tiene un prefijo de *"THM"*. ¿Cuál es el contenido de la bandera? `THM{ACCESS}`
+
+## Introducción a los operadores Shell
