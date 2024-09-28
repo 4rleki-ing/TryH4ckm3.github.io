@@ -265,3 +265,14 @@ En una visión general, voy a mostrar los siguientes operadores:
 |        &&        | Este operador le permite combinar múltiples comandos en una línea de su terminal.                    |
 |        >         | Este operador es un redirector, lo que significa que podemos tomar la salida de un comando (como usar "cat" para emitir un archivo) y dirigirlo en otro lugar. |
 |        >>        | Este operador hace la misma función del operador ">" pero agrega la salida en lugar de reemplazar (lo que significa que no se sobrescribe nada). |
+
+### Operador "&"
+
+
+### Operador "&&"
+
+
+### Operador ">"
+
+
+### Operador ">>"
