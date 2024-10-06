@@ -313,4 +313,13 @@ Lo que nos resulta útil en las pruebas de penetración es que cualquier usuario
 ## Conclusiones y Resúmenes
 ¡Buen trabajo! Esta sala se centró en la teoría y cubrió una gran variedad de aspectos fundamentales para familiarizarse con Linux. Para resumir rápidamente, esta sala le enseñó:
 
-- 
+- Cómo conectarse a una máquina Linux de forma remota usando SSH
+- Avanzar en el uso de comandos proporcionando indicadores, modificadores y dónde puede ir para obtener información sobre estos para cada comando (manual)
+- Algunos comandos más que usará con frecuencia para interactuar con el sistema de archivos y su contenido.
+- Una breve introducción a los permisos de archivo y al cambio de usuarios
+- Un párrafo de resumen de los directorios raíz más importantes en una instalación de Ubuntu Linux y cómo podemos usar los datos almacenados en estos.
+
+Les animo a que vuelvan a pasar por esta sala una o dos veces para familiarizarse con los conceptos. Después de todo, ¡la práctica hace al maestro!
+
+## Fundamentos de Linux - Parte 3
+¡Visite la tercera parte de la serie de fundamentos de Linux [aquí](https://tryhackme.com/r/room/linuxfundamentalspart3).
