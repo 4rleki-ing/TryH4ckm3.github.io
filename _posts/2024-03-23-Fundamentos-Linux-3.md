@@ -76,4 +76,11 @@ VIM es un editor de texto mucho más avanzado. Si bien no se espera que conozca 
 Algunos de los beneficios de VIM, aunque lleva mucho más tiempo familiarizarse, incluyen:
 
 - `Personalizable`: Puedes modificar los atajos de teclado para que sean de tu elección.
-- `Resaltado de sintaxis`: Esto es útil si se está escribiendo o 
+- `Resaltado de sintaxis`: Esto es útil si se está escribiendo o manteniendo código, lo que lo convierte en una opción popular para los desarrolladores de software
+- VIM funciona en todos los terminales en los que no se puede instalar nano.
+- Hay muchos recursos, como [hojas de trucos](https://vim.rtorr.com/), tutoriales y los tipos disponibles para usar.
+
+¡TryHackMe tiene una sala que muestra [VIM](https://tryhackme.com/r/room/toolboxvim), si desea obtener más información sobre este editor!
+
+### Responda las preguntas a continuación
+- Edite *"task3"* ubicado en el directorio de inicio de *"tryhackme"* usando Nano. ¿Qué es la bandera? ``
