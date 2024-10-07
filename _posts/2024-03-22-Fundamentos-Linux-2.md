@@ -207,9 +207,9 @@ Hasta ahora, los archivos que hemos utilizado en nuestros ejemplos no tenían ex
 
 ### Responde las preguntas a continuación
 - ¿Cómo crearías el archivo llamado *"newnote"*? `touch newnote`
-- En la máquina implementable, ¿Cuál es el tipo de archivo *"unknown1"* en el directorio de inicio de *"tryhackme"*? ``
+- En la máquina implementable, ¿Cuál es el tipo de archivo *"unknown1"* en el directorio de inicio de *"tryhackme"*? `ASCII text`
 - ¿Cómo movemos el archivo *"myfile"* al directorio *"myfolder"*? `mv myfile myfolder`
-- ¿Cuál es el contenido de este archivo? ``
+- ¿Cuál es el contenido de este archivo? `THM{FILESYSTEM}`
 
 ## Permisos 101
 Como ya habrás descubierto, ciertos usuarios no pueden acceder a determinados archivos o carpetas. Anteriormente hemos explorado algunos comandos que se pueden utilizar para determinar qué acceso tenemos y a dónde nos lleva.
@@ -264,9 +264,9 @@ Por ejemplo, al usar `su` para cambiar a *"user2"*, nuestra nueva sesión nos ll
 Ahora, después de usar `-l`, nuestra nueva sesión nos ha llevado automáticamente al directorio de inicio de *"user"*
 
 ### Responda las preguntas a continuación
-- En la máquina implementable, ¿Quién es el propietario de *"important"*? ``
+- En la máquina implementable, ¿Quién es el propietario de *"important"*? `user2`
 - ¿Cuál sería el comando para cambiar al usuario *"user2"*? `su user2`
-- Ahora cambie al usuario *"user2"* usando la contraseña **"user2"**; extraiga el contenido de *"important"*, ¿Cuál es el indicador? ``
+- Ahora cambie al usuario *"user2"* usando la contraseña **"user2"**; extraiga el contenido de *"important"*, ¿Cuál es el indicador? `THM{SU_USER2}`
 
 ## Directorios Comunes
 ### /etc
