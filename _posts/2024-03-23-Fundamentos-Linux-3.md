@@ -83,4 +83,67 @@ Algunos de los beneficios de VIM, aunque lleva mucho más tiempo familiarizarse,
 ¡TryHackMe tiene una sala que muestra [VIM](https://tryhackme.com/r/room/toolboxvim), si desea obtener más información sobre este editor!
 
 ### Responda las preguntas a continuación
-- Edite *"task3"* ubicado en el directorio de inicio de *"tryhackme"* usando Nano. ¿Qué es la bandera? ``
+- Edite *"task3"* ubicado en el directorio de inicio de *"tryhackme"* usando Nano. ¿Qué es la bandera? `THM{TEXT_EDITORS}`
+
+## Utilidades Generales / Útiles
+### Descarga de archivos (wget)
+Una caracteística bastante fundamental de la informática es la capacidad de transferir archivos. Por ejemplo, es posible que desee descargar un programa, un script o incluso una imagen. Afortunadamente para nosotros, hay varias formas en las que podemos recuperar estos archivos.
+
+Vamos a cubrir el uso de `wget`. Este comando nos permite descargar archivos de la web a través de HTTP, como si estuvieras accediendo al archivo en el navegador. Simplemente tenemos que proporcionar la dirección del recurso que deseamos descargar. Por ejemplo, si quisiera descargar un archivo llamado *"myfile.txt"* en mi máquina, suponiendo que supiera la dirección web, se vería así: `wget https://assets.tryhackme.com/additional/linux-fundamentals/part3/myfile.txt`
+
+### Transferencia de archivos desde su host - SCP (SSH)
+La copia segura, o SCP, es solo eso: un medio para copiar archivos de forma segura. A diferencia del comando *cp* normal, este comando le permite transferir archivos entre dos computadoras utilizando el protocolo SSh para proporcionar autenticación y cifrado.
+
+Trabajando en un modelo de ORIGEN y DESTINO, SCP te permite:
+
+- Copie archivos y directorios de su sistema actual a un sistema remoto.
+- Copie archivos y directorios de un sistema remoto a su sistema actual.
+
+Siempre que conozcamos los nombres de usuario y las contraseñas de un usuario en su sistema actual y un usuario en el sistema remoto. Por ejemplo, copiemos un archivo de ejemplo de nuestra máquina a una máquina remota, que he expuesto cuidadosamente en la siguiente tabla:
+
+| Variable                                                            | Valor           |
+|---------------------------------------------------------------------|-----------------|
+| La dirección IP del sistema remoto                                  | 192.168.1.30    |
+| Usuario en el sistema remoto                                        | ubuntu          |
+| Nombre del archivo en el sistema local                              | important.txt   |
+| Nombre en el que deseamos almacenar el archivo en el sistema remoto | transferred.txt |
+
+Con esta información, vamos a crear el comando `scp` (recordando que el formato de SCP es solo ORIGEN y DESTINO) `scp important.txt ubuntu@192.168.1.30:/home/ubuntu/transferred.txt`. Y ahora invirtamos esto y diseñemos la sintaxis para usar *scp* para copiar un archivo de una computadora remota en la que no hemos iniciado sesión.
+
+| Variable                                                           | Valor         |
+|--------------------------------------------------------------------|---------------|
+| Dirección IP del sistema remoto                                    | 192.168.1.30  |
+| Usuario en el sistema remoto                                       | ubuntu        |
+| Nombre del archivo en el sistema remoto                            | documents.txt |
+| Nombre con el que deseamos almacenar el archivo en nuestro sistema | notes.txt     |
+
+El comando ahora tendrá el siguiente aspecto `scp ubuntu@192.168.1.30:/home/ubuntu/documents.txt notes.txt`
+
+### Sirviendo archivos desde su host - WEB
+Las máquinas Ubuntu vienen preempaquetadas con *python3*. Python proporciona un módulo ligero y fácil de usar llamado `HTTPServer`. Este módulo convierte su computadora en un servidor web rápido y fácil que puede usar para servir sus propios archivos, donde luego pueden ser descargados por otra computadora usando comandos como `curl` y `wget`.
+
+*"HTTPServer"* de Python3 servirá los archivos en el directorio donde ejecuta el comando, pero esto se puede cambiar proporcionando opciones que se pueden encontrar en las páginas del manual. simplemente, todo lo que tenemos que hacer es correr `python3 -m http.server` en la terminal para iniciar el módulo. En la siguiente captura de pantalla, se aprecia como se está sirviendo desde un directorio llamado *"webserver"*, que tiene un solo nombre *"file"*.
+
+<center>
+  <img src="https://4rleki-ing.github.io/TryH4ckm3.github.io/assets/images/Linux-3/webserver.png" width="50%"> 
+</center>
+
+Ahora, usemos `wget` para descargar el archivo utilizando la dirección IP y el nombre del archivo. Recuerde, debido a que el servidor *python3* está ejecutando el puerto 8000, deberá especificar esto dentro de su comando *wget*. Por ejemplo: 
+
+<center>
+  <img src="https://4rleki-ing.github.io/TryH4ckm3.github.io/assets/images/Linux-3/wget-myfile.png" width="50%"> 
+</center>
+
+Tenga en cuenta que deberá abrir una nueva terminal para usar `wget` y deje el servidor web en el que ha iniciado el servidor web Python3. Esto se debe a que, una vez que inicies el servidor web Python3, se ejecutará en esa terminal hasta que lo canceles.
+Echemos un vistazo a la siguiente captura de pantalla como ejemplo:
+
+<center>
+  <img src="https://4rleki-ing.github.io/TryH4ckm3.github.io/assets/images/Linux-3/wget-file.png" width="50%"> 
+</center>
+
+**Recuerde**, deberá ejecutar el comando *wget* en otra terminal (mientras mantiene activo el terminal que ejecuta el servidor Python3). A continuación se muestra un ejemplo de esto en TryHackMe AttackBox:
+
+<center>
+  <img src="https://4rleki-ing.github.io/TryH4ckm3.github.io/assets/images/Linux-3/webserver-exec.png" width="50%"> 
+</center>
+
