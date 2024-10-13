@@ -147,3 +147,83 @@ Echemos un vistazo a la siguiente captura de pantalla como ejemplo:
   <img src="https://4rleki-ing.github.io/TryH4ckm3.github.io/assets/images/Linux-3/webserver-exec.png" width="50%"> 
 </center>
 
+Un defecto de este modulo es que no tiene forma de indexar, por lo que debe de saber el nombre exacto y la ubicación del archivo que desea utilizar. Por eso prefiero utilizar [Updog](https://github.com/sc0tfree/updog), un servidor web mas avanzado pero liviano. Pero por ahora, sigamos utilizando el *"servidor HTTP"* de Python.
+
+### Responda las preguntas a continuación
+- Asegurese de estar conectado a la instancia implementada.
+- Ahora, use el modulo *"HTTPServer"* de Python3 para iniciar el servidor web en el directorio de inicio del usuario *"tryhackme"* en la instancia implementada.
+- Descargue el archivo `http://10.10.137.7:8000/.flag.txt` en TryHackMe AttackBox. recuerde, deberà hacer esto en una nueva terminal. ¿Cùal es el contenido del archivo? `THM{WGET_WEBSERVER}`
+- Cree y descargue archivos para aplicar aùn màs su aprendizaje; vea como puede leer la documentacion en el modulo *"HTTPServer"* de Python3. Utilice `Ctrl + C` para detener el modulo HTTPServer de python3 una vez que haya terminado.
+
+## Procesos 101
+Los procesos son los programas que se ejecutan en la máquina. Son administrados por el kernel, donde cada proceso tiene un identificador único asociado tambièn conocido como (PID). El PID aumenta segùn el orden en que comienza el proceso. Es decir, el proceso 60 tendrà un PID de 60.
+
+### Visualización de Procesos
+Podemos utilizar el comando `ps` para proporcionar una lista de los procesos en ejecución, como la sesión de nuestro usuario y alguna información adicional como su código de estado, la sesión que lo está ejecutando, cuánto tiempo de uso de la CPU está usando y el nombre del programa o comando real que se está ejecutando.
+
+<center>
+  <img src="https://4rleki-ing.github.io/TryH4ckm3.github.io/assets/images/Linux-3/ps.png" width="50%"> 
+</center>
+
+Observe cómo en la captura de pantalla anterior, el segundo proceso *ps* tiene un PID de 204, y luego, en el comando debajo, este se incrementa a 205.
+
+Para ver los procesos ejecutados por otros usuarios y aquellos que no se ejecutan desde una sesión (procesos del sistema), debemos proporcionar *aux* al comando *ps* así: `ps aux`.
+
+<center>
+  <img src="https://4rleki-ing.github.io/TryH4ckm3.github.io/assets/images/Linux-3/ps-aux.png" width="50%"> 
+</center>
+
+Tenga en cuenta que podemos ver un total de *5 procesos*; observe que ahora tenemos *"root"* y *cmnatic"*.
+
+Otro comando muy útil es el comando `top`; *top* le brinda estadísticas en tiempo real de los procesos que se ejecutan en el sistema en lugar de una vista única. Estas estadísticas se actualizarán cada *10 segundos*, pero también se actualizarán cuando utilice las teclas de flecha para explorar las distintas filas.
+
+<center>
+  <img src="https://4rleki-ing.github.io/TryH4ckm3.github.io/assets/images/Linux-3/top.png" width="50%"> 
+</center>
+
+### Gestión de Procesos
+Puede enviar señales que finalicen procesos; hay una variedad de tipos de señales que se correlacionan exactamente con qué tan *"limpiamente"* el núcleo maneja el proceso. Para eliminar un comando, podemos utilizar el comando *"kill"* con el nombre apropiado y el *PID asociado* que deseamos eliminar, es decir, para eliminar el PID 1337, usaríamos `kill 1337`.
+
+A continuación se muestran algunas de las señales que podemos enviar a un proceso cuando se elimina:
+- SIGTERM: Elimina el proceso, pero permite que realice algunas tareas de limpieza de antemano.
+- SIGKILL: Elimina el proceso, no realiza ninguna limpieza después del hecho.
+- SIGSTOP: Detiene/Suspende un proceso.
+
+### ¿Cómo comienzan los procesos?
+Comencemos hablando de espacios de nombres. El sistema operativo (SO) utiliza espacios de nombres para, en última instancia, dividir los recursos disponibles en la computadora en procesos (CPU, RAM y prioridad). Piense en ello como dividir su computadora en porciones, similar a un pastel. Los procesos dentro de ese segmento tendrán acceso a una cierta cantidad de potencia informática; sin embargo, será una pequeña porción de lo que realmente está disponible para cada proceso en general.
+
+Los espacios de nombres son excelentes para la seguridad, ya que son una forma de aislar procesos de otros: solo aquellos que están en el mismo espacio de nombres podrán verse entre sí.
+
+Anteriormente hablamos de cómo funciona el PID y aquí es donde entra en juego. El proceso con un ID de 0 es un proceso que se inicia cuando se inicia el sistema. Este proceso es el inicio del sistema en Ubuntu, como `systemd`, que se utiliza para proporcionar una forma de administrar los procesos de un usuario y se ubica entre el sistema operativo y el usuario.
+
+Por ejemplo, una vez que un sistema arranca e inicia, *systemd* es uno d elos primeros procesos que s einicia. Cualquier programa o pieza de software que queramos iniciar comenzará como lo que s econoce como *un proceso hijo de systemd*. Esto significa que está controlado por systemd, pero se ejecutará como su propio proceso (aunque compartiendo los recursos de systemd) para que nos sea más fácil identificarlo y similares.
+
+<center>
+  <img src="https://4rleki-ing.github.io/TryH4ckm3.github.io/assets/images/Linux-3/systemd.png" width="50%"> 
+</center>
+
+### Cómo hacer que los procesos/servicios se inicien al arrancar
+Algunas aplicaciones se pueden iniciar durante el arranque del sistema que poseemos. Por ejemplo, *servidores web* *servidores de bases de datos* o *servidores de transferencia de archivos*. Este software suele ser fundamental y los administradores suelen indicarle qee se inicie durante el arranque del sistema.
+
+En este ejemplo, le indicaremos al servidor web Apache que inicie Apache manualmente y luego le indicaremos al sistema que inicie Apache2 durante el arranque.
+
+Utilizaremos el comando `systemctl`, este comando nos permite interactuar con el proceso/demonio systemd. Continuando con nuestro ejemplo, *systemctl* es un comando fácil de usar que toma el siguiente formato: `systemctl (option) (service)`.
+
+Por ejemplo, para indicarle a Apache que inicie, usaremos `systemctl start apache2`. Parece bastante simple, lo mismo ocurre si quisiéramos detener Apache, simplemente reemplazaríamos la (opción) con *stop* (en lugar de iniciar como proporcionamos).
+
+Podemos hacer 4 opciones con *systemctl*:
+
+- Start
+- Stop
+- Enable
+- Disable
+
+### Introducción a la ejecución en segundo plano y en primer plano en Linux
+Los procesos pueden ejecutarse en dos estados: en primer y segundo plano. Por ejemplo, los comandos que ejecuta en su terminal, como **echo**, o cosas por el estilo, se ejecutarán en primer plano de su terminal, ya que es el único comando proporcionado que no se le ha indicado que se ejecute en segundo plano. *"echo"* es un gran ejemplo, ya que la salida regresará a usted en primer plano, pero no en segundo plano; tome la captura de pantalla a continuación, por ejemplo.
+
+<center>
+  <img src="https://4rleki-ing.github.io/TryH4ckm3.github.io/assets/images/Linux-3/echo.png" width="50%"> 
+</center>
+
+Aquí estamos ejecutando `echo "Hi THM"`, donde esperamos que nos devuelvan el resultado como al principio. Pero después de agregar el operador `&` al comando, en lugar de la salida real, solo se nos da el ID del proceso *echo*, ya que se está ejecutando en segundo plano.
+
