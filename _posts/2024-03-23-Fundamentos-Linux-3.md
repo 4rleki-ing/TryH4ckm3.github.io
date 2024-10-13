@@ -227,3 +227,4 @@ Los procesos pueden ejecutarse en dos estados: en primer y segundo plano. Por ej
 
 Aquí estamos ejecutando `echo "Hi THM"`, donde esperamos que nos devuelvan el resultado como al principio. Pero después de agregar el operador `&` al comando, en lugar de la salida real, solo se nos da el ID del proceso *echo*, ya que se está ejecutando en segundo plano.
 
+Esto es excelente para comandos como *copiar archivos*
