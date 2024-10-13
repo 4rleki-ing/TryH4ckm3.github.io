@@ -227,4 +227,20 @@ Los procesos pueden ejecutarse en dos estados: en primer y segundo plano. Por ej
 
 Aquí estamos ejecutando `echo "Hi THM"`, donde esperamos que nos devuelvan el resultado como al principio. Pero después de agregar el operador `&` al comando, en lugar de la salida real, solo se nos da el ID del proceso *echo*, ya que se está ejecutando en segundo plano.
 
-Esto es excelente para comandos como *copiar archivos*, ya que significa que podemos ejecutar el comando en segundo plano
+Esto es excelente para comandos como *copiar archivos*, ya que significa que podemos ejecutar el comando en segundo plano y continuar con cualquier otro comando que deseemos ejecutar (sin tener que esperar a que finalice primero la copia del archivo).
+
+Podemos hacer exactamente lo mismo al ejecutar cosas como scripts: en lugar de depender del operador *&*, podemos usar `Ctrl + Z` en nuestro teclado para ejecutar un proceso en segundo plano. También es una forma eficaz de *"pausar"* la ejecución de un script o comando, como el siguiente ejemplo:
+
+<center>
+  <img src="https://4rleki-ing.github.io/TryH4ckm3.github.io/assets/images/Linux-3/pausar.png" width="50%"> 
+</center>
+
+Este script repetirá una y otra vez *"¡Esto seguirá en bucle hasta que pare!"* hasta que detenga o suspenda el proceso. Para ello, utilice `Ctrl + Z` (como indice T^Z). Ahora nuestra terminal ya no estará llena de mensajes, hasta que la pongamos en primer plano, lo que analizaremos a continuación.
+
+### Poner un proceso en primer plano
+Ahora que tenemos un proceso ejecutándose en segundo plano, por ejemplo, nuestro script *"background.sh"*, que se puede confirmar mediante el comando `ps aux`, podemos dar marcha atrás y traer este proceso de nuevo al primer plano para interactuar con él.
+
+<center>
+  <img src="https://4rleki-ing.github.io/TryH4ckm3.github.io/assets/images/Linux-3/back.png" width="50%"> 
+</center>
+
